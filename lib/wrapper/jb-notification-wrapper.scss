@@ -1,0 +1,16 @@
+.jb-notification-wrapper-web-component{
+    position: var(--jb-notification-wrapper-position, absolute);
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:0.5rem;
+    width: 100vw;
+    height: 100vh;
+    padding-top: var(--jb-notification-wrapper-padding-top, 64px);
+    z-index: 9999;
+    top: 0;
+    left: 0; 
+    pointer-events: none;
+}

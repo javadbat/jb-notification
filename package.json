@@ -1,0 +1,34 @@
+{
+  "name": "jb-notification",
+  "description": "notification web component",
+  "type": "module",
+  "author": {
+		"name": "mohammad javad bathaei",
+		"email": "javadbat@gmail.com"
+	},
+  "keywords": [
+    "jb",
+    "jb-notification",
+    "notification",
+    "message",
+    "pop up",
+    "notif",
+    "alert",
+    "web component"
+  ],
+  "version": "0.1.0",
+  "bugs": "https://github.com/javadbat/jb-notification/issues",
+  "license": "MIT",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "lib/",
+    "dist/"
+  ],
+  "main": "index.js",
+  "types": "./dist/jb-notification.d.ts",
+  "repository": {
+		"type": "git",
+		"url": "git@github.com:javadbat/jb-notification.git"
+  }
+}

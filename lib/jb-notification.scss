@@ -1,0 +1,164 @@
+:host{
+    width: fit-content;
+    max-width: calc(100vw - 2rem);
+    --success-bg-color:#06a77d;
+    --info-bg-color:#2962ff;
+    --warning-bg-color:#c39c00;
+    --error-bg-color:#D8315B;
+    //
+    --text-color:#fff;
+    --info-text-color:var(--text-color);
+    --success-text-color:var(--text-color);
+    --warning-text-color:var(--text-color);
+    --error-text-color:var(--text-color);
+}
+.jb-notification-web-component{
+    width: fit-content;
+    display: none;
+    pointer-events: all;
+    &.--show{
+        display: block;
+    }
+    &.--info{
+        .notification-content{
+            background-color: var(--info-bg-color);
+        }
+        .message-texts-wrapper{
+            color:var(--info-text-color);
+        }
+        
+    }
+    &.--warning{
+        .notification-content{
+            background-color: var(--warning-bg-color);
+        }
+        .message-texts-wrapper{
+            color:var(--warning-text-color);
+        }
+        
+    }
+    &.--success{
+        .notification-content{
+            background-color: var(--success-bg-color);
+        }
+        .message-texts-wrapper{
+            color:var(--success-text-color);
+        }
+        
+    }
+    &.--error{
+        .notification-content{
+           background-color: var(--error-bg-color); 
+        }
+        .message-texts-wrapper{
+            color:var(--error-text-color);
+        }
+        
+    }
+    .notification-content{
+        border-radius: 2.0rem;
+        width: fit-content;
+        padding: 0.5rem;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 3rem auto;
+        grid-template-rows: auto;
+        grid-template-areas: "icon texts";
+        gap:0.25rem;
+        .icon-wrapper{
+            grid-area: icon;
+            width: 100%;
+            height: 100%;
+            .notification-icon{
+                width: 100%;
+                height: 100%;
+                stroke: none;
+                .icon-bg{
+                    stroke: none;
+                    stroke-width: 0;
+                    fill:#fff;
+                }
+                .symbol{
+                    &.--hidden{
+                        display: none;
+                    }
+                    &.info-symbol{
+                        --symbol-color:var(--info-bg-color);
+                        .i-dot{
+                            stroke: var(--symbol-color);
+                            stroke-width: 3px;
+                            stroke-linecap: round;
+                        }
+                        .i-line{
+                            stroke: var(--symbol-color);
+                            stroke-width: 3px;
+                            stroke-linecap: round;
+                            stroke-dasharray: 5px 5px;
+                        }
+                    }
+                    &.warning-symbol{
+                        --symbol-color:var(--warning-bg-color);
+                        .ri-dot{
+                            stroke: var(--symbol-color);
+                            stroke-width: 3px;
+                            stroke-linecap: round;
+                        }
+                        .ri-line{
+                            stroke: var(--symbol-color);
+                            stroke-width: 3px;
+                            stroke-linecap: round;
+                            stroke-dasharray: 7px 7px;
+                        }
+                    }
+                    &.error-symbol{
+                        --symbol-color:var(--error-bg-color);
+                        .line1{
+                            stroke: var(--symbol-color);
+                            stroke-width: 3px;
+                            stroke-linecap: round;
+                            stroke-dasharray: 12px 12px;
+                        }
+                        .line2{
+                            stroke: var(--symbol-color);
+                            stroke-width: 3px;
+                            stroke-linecap: round;
+                            stroke-dasharray: 12px 12px;
+                        }
+                    }
+                    &.success-symbol{
+                        --symbol-color:var(--success-bg-color);
+                        .tik{
+                            stroke: var(--symbol-color);
+                            stroke-width: 3px;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-dasharray: 16px 16px;
+                            // stroke-dashoffset: 16px;
+                        }
+                    }
+                }
+                
+            }
+        }
+        .message-texts-wrapper{
+            grid-area: texts;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            .title-wrapper{
+                font-size: 1.1rem;
+                font-weight: 700;
+                text-align: start;
+            }
+            .desc-wrapper{
+                font-size: 0.8rem;
+                font-weight: 100;
+                &:empty{
+                    display: none;
+                }
+            }
+        }
+
+    }
+}
