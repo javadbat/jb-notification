@@ -1,7 +1,7 @@
 import HTML from './jb-notification.html';
 import CSS from './jb-notification.scss';
 import { ElementsObject, NotificationType, SwipeGestureData } from './types';
-
+export {NotificationType};
 export const notificationTypes: NotificationType[] = ["ERROR", "INFO", "SUCCESS", "WARNING"];
 export class JBNotificationWebComponent extends HTMLElement {
     #state: "OPEN" | "CLOSE" = "CLOSE";
