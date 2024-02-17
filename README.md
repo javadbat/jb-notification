@@ -16,3 +16,6 @@ document.querySelector('jb-notification').type = "SUCCESS";
 ```html
     <jb-notification title="message title" type="SUCCESS"></jb-notification>
 ```
+## MessageTypes:
+
+we have several types of message the types are : `SUCCESS`,`ERROR`,`WARNING`,`INFO`;
