@@ -1,5 +1,5 @@
 # jb-notification
-notification ui web component
+notification ui web component to show notification directly from pure js code without any framework    
 
 ## set title & description
 ```js
