@@ -131,7 +131,7 @@ export class JBNotificationWebComponent extends HTMLElement {
           break;
       }
     }
-    #timer: NodeJS.Timeout | null = null;
+    #timer: number | null = null;
     show() {
       this.#state = "OPEN";
       this.elements.componentWrapper.classList.add("--show");
