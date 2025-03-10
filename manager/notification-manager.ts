@@ -1,25 +1,27 @@
 import 'jb-notification';
-import 'jb-notification/dist/wrapper/jb-notification-wrapper';
+import 'jb-notification/wrapper';
 // eslint-disable-next-line no-duplicate-imports
-import { JBNotificationWebComponent, NotificationType } from 'jb-notification';
+import {JBNotificationWrapperWebComponent} from 'jb-notification/wrapper';
+// eslint-disable-next-line no-duplicate-imports
+import { type JBNotificationWebComponent } from 'jb-notification';
 // new messaging system
 class NotificationManager {
   get wrapperDom() {
-    return document.querySelector('jb-notification-wrapper');
+    return document.querySelector('jb-notification-wrapper') as JBNotificationWrapperWebComponent;
   }
   constructor() {
     this.#initWrapperDom();
   }
     #initWrapperDom() {
-    const notificationWrapper = document.createElement('jb-notification-wrapper');
+    const notificationWrapper = document.createElement('jb-notification-wrapper') ;
     document.body.appendChild(notificationWrapper);
   }
     #createMessageDom(title, type, desc) {
-      const notif = document.createElement('jb-notification');
+      const notif = document.createElement('jb-notification') as JBNotificationWebComponent;
       notif.type = type;
       notif.title = title;
       notif.description = desc;
-      notif.addEventListener("close", this.onNotificationClose.bind(this))
+      notif.addEventListener("close", this.onNotificationClose.bind(this));
       return notif;
     }
     new(title, type, desc = null) {

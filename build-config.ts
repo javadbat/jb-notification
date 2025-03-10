@@ -9,6 +9,15 @@ export const webComponentList: WebComponentBuildConfig[] = [
     external: [],
     globals: {},
   },
+  {
+    name: "jb-notification-wrapper",
+    path: "./wrapper/lib/jb-notification-wrapper.ts",
+    outputPath: "./wrapper/dist/jb-notification-wrapper.js",
+    umdName: "JBNotificationWrapper",
+    external: [],
+    globals: {},
+    dir:"./wrapper",
+  },
 ];
 export const reactComponentList: ReactComponentBuildConfig[] = [
 ];
