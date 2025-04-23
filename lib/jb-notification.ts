@@ -1,6 +1,9 @@
 import HTML from './jb-notification.html';
 import CSS from './jb-notification.scss';
 import { ElementsObject, NotificationType, SwipeGestureData } from './types';
+import {defineColors} from 'jb-core/theme';
+//
+
 export {NotificationType};
 export const notificationTypes: NotificationType[] = ["ERROR", "INFO", "SUCCESS", "WARNING"];
 export class JBNotificationWebComponent extends HTMLElement {
@@ -51,6 +54,7 @@ export class JBNotificationWebComponent extends HTMLElement {
 
     initWebComponent() {
       const shadowRoot = this.attachShadow({ mode: 'open' });
+      defineColors();
       const html = `<style>${CSS}</style>` + '\n' + HTML;
       const element = document.createElement('template');
       element.innerHTML = html;

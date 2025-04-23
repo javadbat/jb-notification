@@ -16,7 +16,7 @@
     "alert",
     "web component"
   ],
-  "version": "0.4.0",
+  "version": "0.5.0",
   "bugs": "https://github.com/javadbat/jb-notification/issues",
   "license": "MIT",
   "files": [
@@ -28,6 +28,9 @@
     "wrapper/",
     "wrapper/dist/"
   ],
+  "dependencies": {
+    "jb-core":">=0.10.0"
+  },
   "main": "index.js",
   "types": "./dist/jb-notification.d.ts",
   "repository": {

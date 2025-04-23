@@ -1,16 +1,7 @@
+@use "./variables.css";
 :host{
     width: fit-content;
     max-width: calc(100vw - 2rem);
-    --success-bg-color:#06a77d;
-    --info-bg-color:#2962ff;
-    --warning-bg-color:#c39c00;
-    --error-bg-color:#D8315B;
-    //
-    --text-color:#fff;
-    --info-text-color:var(--text-color);
-    --success-text-color:var(--text-color);
-    --warning-text-color:var(--text-color);
-    --error-text-color:var(--text-color);
 }
 .jb-notification-web-component{
     width: fit-content;

@@ -1,0 +1,12 @@
+:host{
+  --success-bg-color:var(--jb-notification-success-bg-color, var(--jb-green));
+  --info-bg-color:var(--jb-notification-info-bg-color, var(--jb-primary));
+  --warning-bg-color:var(--jb-yellow);
+  --error-bg-color:var(--jb-notification-error-bg-color, var(--jb-red));
+  /**/
+  --text-color: var(--jb-text-contrast);
+  --info-text-color:var(--text-color);
+  --success-text-color:var(--text-color);
+  --warning-text-color:var(--text-color);
+  --error-text-color:var(--text-color);
+}
