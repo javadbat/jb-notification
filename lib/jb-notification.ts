@@ -1,6 +1,6 @@
 import HTML from './jb-notification.html';
 import CSS from './jb-notification.scss';
-import { ElementsObject, NotificationType, SwipeGestureData } from './types';
+import type { ElementsObject, NotificationType, SwipeGestureData } from './types.js';
 import {defineColors} from 'jb-core/theme';
 //
 
