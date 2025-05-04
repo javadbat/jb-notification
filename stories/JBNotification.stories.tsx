@@ -2,7 +2,7 @@ import { JBNotificationTest } from "./samples/jb-notification-test";
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<unknown> = {
-  title: "Example/JBNotification",
+  title: "Components/JBNotification",
   component: JBNotificationTest,
 };
 export default meta;
