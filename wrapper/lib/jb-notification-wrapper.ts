@@ -1,5 +1,5 @@
-import HTML from './jb-notification-wrapper.html';
 import CSS from './jb-notification-wrapper.scss';
+import { renderHTML } from './render';
 
 export class JBNotificationWrapperWebComponent extends HTMLElement {
 
@@ -10,7 +10,7 @@ export class JBNotificationWrapperWebComponent extends HTMLElement {
 
   initWebComponent() {
     const shadowRoot = this.attachShadow({ mode: 'open' });
-    const html = `<style>${CSS}</style>` + '\n' + HTML;
+    const html = `<style>${CSS}</style>` + '\n' + renderHTML();
     const element = document.createElement('template');
     element.innerHTML = html;
     shadowRoot.appendChild(element.content.cloneNode(true));
