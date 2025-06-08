@@ -1,5 +1,5 @@
-import HTML from './jb-notification.html';
 import CSS from './jb-notification.scss';
+import { renderHTML } from './render';
 import type { ElementsObject, NotificationType, SwipeGestureData } from './types.js';
 import {registerDefaultVariables} from 'jb-core/theme';
 //
@@ -55,7 +55,7 @@ export class JBNotificationWebComponent extends HTMLElement {
     initWebComponent() {
       const shadowRoot = this.attachShadow({ mode: 'open' });
       registerDefaultVariables();
-      const html = `<style>${CSS}</style>` + '\n' + HTML;
+      const html = `<style>${CSS}</style>` + '\n' + renderHTML();
       const element = document.createElement('template');
       element.innerHTML = html;
       shadowRoot.appendChild(element.content.cloneNode(true));

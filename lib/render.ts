@@ -1,4 +1,6 @@
-<div class="jb-notification-web-component --info">
+export function renderHTML(): string {
+  return /* html */ `
+  <div class="jb-notification-web-component --info">
     <div class="notification-content">
         <div class="icon-wrapper">
             <svg class="notification-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,4 +33,6 @@
             <div class="desc-wrapper"></div>
         </div>
     </div>
-</div>
+  </div>
+  `;
+}
