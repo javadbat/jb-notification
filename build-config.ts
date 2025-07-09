@@ -6,7 +6,7 @@ export const webComponentList: WebComponentBuildConfig[] = [
     path: "./lib/jb-notification.ts",
     outputPath: "./dist/jb-notification.js",
     umdName: "JBNotification",
-    external: [],
+    external: ["jb-core"],
     globals: {},
   },
   {
@@ -14,9 +14,19 @@ export const webComponentList: WebComponentBuildConfig[] = [
     path: "./wrapper/lib/jb-notification-wrapper.ts",
     outputPath: "./wrapper/dist/jb-notification-wrapper.js",
     umdName: "JBNotificationWrapper",
-    external: [],
+    external: ["jb-core", "jb-notification"],
     globals: {},
     dir:"./wrapper",
+  },
+    {
+    name: "jb-notification-manager",
+    path: "./manager/lib/jb-notification-manager.ts",
+    outputPath: "./manager/dist/jb-notification-manager.js",
+    umdName: "JBNotificationManager",
+    external: ["jb-core", "jb-notification"],
+    globals: {"jb-notification":"JBNotification"},
+    dir:"./manager",
+
   },
 ];
 export const reactComponentList: ReactComponentBuildConfig[] = [

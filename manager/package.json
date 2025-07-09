@@ -1,6 +1,6 @@
 {
-  "name": "jb-notification",
-  "description": "notification web component",
+  "name": "jb-notification-manager",
+  "description": "notification web component manager",
   "type": "module",
   "author": {
 		"name": "mohammad javad bathaei",
@@ -9,31 +9,21 @@
   "keywords": [
     "jb",
     "jb-notification",
-    "notification",
-    "toast",
+    "notification manager",
     "message",
-    "pop up",
-    "notif",
-    "alert",
     "web component"
   ],
-  "version": "0.8.0",
+  "version": "1.0.0",
   "bugs": "https://github.com/javadbat/jb-notification/issues",
   "license": "MIT",
   "files": [
     "LICENSE",
     "README.md",
     "lib/",
-    "dist/",
-    "manager/",
-    "wrapper/",
-    "wrapper/dist/"
+    "dist/"
   ],
-  "dependencies": {
-    "jb-core":">=0.15.0"
-  },
-  "main": "index.js",
-  "types": "./dist/jb-notification.d.ts",
+  "main": "main.js",
+  "types": "./dist/jb-notification-manager.d.ts",
   "repository": {
 		"type": "git",
 		"url": "git@github.com:javadbat/jb-notification.git"

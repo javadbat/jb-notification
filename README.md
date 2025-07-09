@@ -13,29 +13,31 @@ notification ui web component to show notification directly from pure js code wi
 
 ## Demo
 
-[storybook](https://javadbat.github.io/design-system/?path=/story/components-jbnotification--normal)
+[storybook](https://javadbat.github.io/design-system/?path=/story/components-jbnotification--normal)    
+[code sandbox preview](https://3f63dj.csb.app/samples/jb-notification)    
+[code sandbox code](https://codesandbox.io/p/sandbox/jb-design-system-3f63dj?file=%2Fsrc%2Fsamples%2FJBNotification.tsx%3A11%2C24)
 
 ## set title & description
 
 ```js
-document.querySelector('jb-notification').title = "Information Message";
-document.querySelector('jb-notification').description = "optional detail about what happen you may not set it";
+  document.querySelector('jb-notification').title = "Information Message";
+  document.querySelector('jb-notification').description = "optional detail about what happen you may not set it";
 ```
 ```html
-    <jb-notification title="message title" description="description below title text to tell more about what happen"></jb-notification>
+<jb-notification title="message title" description="description below title text to tell more about what happen"></jb-notification>
 ```
 ## set notification type
 ```js
-document.querySelector('jb-notification').type = "SUCCESS";
+  document.querySelector('jb-notification').type = "SUCCESS";
 ```
 ```html
-    <jb-notification title="message title" type="SUCCESS"></jb-notification>
+  <jb-notification title="message title" type="SUCCESS"></jb-notification>
 ```
 ## MessageTypes:
 
 we have several types of message the types are : `SUCCESS`,`ERROR`,`WARNING`,`INFO`;
 ```js
-document.querySelector('jb-notification').type = `SUCCESS`;
+  document.querySelector('jb-notification').type = `SUCCESS`;
 ```
 
 ## wrapper
