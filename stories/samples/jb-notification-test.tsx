@@ -1,24 +1,24 @@
 import React from 'react';
 import {JBButton} from 'jb-button/react';
 import './jb-notification-styles.css';
-import {notificationManager} from 'jb-notification/manager/notification-manager.ts';
-
+import {NotificationManager} from 'jb-notification/manager';
+const notificationManager = new NotificationManager();
 export function JBNotificationTest() {
   function showSuccessMessage() {
     const message:string | null = 'completed successfully';
-    notificationManager.new(message,"SUCCESS");
+    notificationManager.new({title:message,type:"SUCCESS"});
   }
   function showErrorMessage() {
-    notificationManager.new("error happen","ERROR");
+    notificationManager.new({title:"error happen",type:"ERROR"});
 
   }
   function showWarningMessage() {
        
-    notificationManager.new('operation is not safe',"WARNING");
+    notificationManager.new({title:'operation is not safe',type:"WARNING"});
   }
   function showInformationMessage() {
         
-    notificationManager.new('operation is good',"INFO");
+    notificationManager.new({title:'operation is good',type:"INFO"});
   }
   return (
     <div className="jb-notification-test-page">
