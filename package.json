@@ -10,13 +10,14 @@
     "jb",
     "jb-notification",
     "notification",
+    "toast",
     "message",
     "pop up",
     "notif",
     "alert",
     "web component"
   ],
-  "version": "0.5.0",
+  "version": "0.6.0",
   "bugs": "https://github.com/javadbat/jb-notification/issues",
   "license": "MIT",
   "files": [
