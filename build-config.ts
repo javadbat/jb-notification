@@ -6,7 +6,7 @@ export const webComponentList: WebComponentBuildConfig[] = [
     path: "./lib/jb-notification.ts",
     outputPath: "./dist/jb-notification.js",
     umdName: "JBNotification",
-    external: ["jb-core"],
+    external: ["jb-core","jb-core/theme"],
     globals: {},
   },
   {
