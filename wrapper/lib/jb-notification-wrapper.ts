@@ -1,4 +1,4 @@
-import CSS from './jb-notification-wrapper.scss';
+import CSS from './jb-notification-wrapper.css';
 import { renderHTML } from './render';
 
 export class JBNotificationWrapperWebComponent extends HTMLElement {
