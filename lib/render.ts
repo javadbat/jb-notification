@@ -29,7 +29,7 @@ export function renderHTML(): string {
             </svg>
         </div>
         <div class="message-texts-wrapper">
-            <div class="title-wrapper">پیغام شما با موفقیت ثبت شد</div>
+            <div class="title-wrapper"></div>
             <div class="desc-wrapper"></div>
         </div>
     </div>
