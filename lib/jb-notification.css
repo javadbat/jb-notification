@@ -46,15 +46,15 @@
         
     }
     .notification-content{
-        border-radius: 2.0rem;
+        border-radius: var(--border-radius);
         width: fit-content;
-        padding: 0.5rem;
+        padding: var(--padding);
         box-sizing: border-box;
         display: grid;
         grid-template-columns: 3rem auto;
         grid-template-rows: auto;
         grid-template-areas: "icon texts";
-        gap:0.25rem;
+        gap:var(--gap);
         .icon-wrapper{
             grid-area: icon;
             width: 100%;
@@ -136,13 +136,13 @@
             justify-content: center;
             
             .title-wrapper{
-                font-size: 1.1rem;
-                font-weight: 700;
+                font-size: var(--title-font-size);
+                font-weight: var(--title-font-weight);
                 text-align: start;
             }
             .desc-wrapper{
-                font-size: 0.8rem;
-                font-weight: 100;
+                font-size: var(--desc-font-size);
+                font-weight: var(--desc-font-weight);;
                 &:empty{
                     display: none;
                 }

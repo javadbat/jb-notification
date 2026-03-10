@@ -5,7 +5,7 @@ import type { ElementsObject, NotificationType, SwipeGestureData } from './types
 import { registerDefaultVariables } from 'jb-core/theme';
 //
 
-export { NotificationType };
+export type { NotificationType };
 export const notificationTypes: NotificationType[] = ["ERROR", "INFO", "SUCCESS", "WARNING"];
 export class JBNotificationWebComponent extends HTMLElement {
   #state: "OPEN" | "CLOSE" = "CLOSE";
@@ -62,7 +62,7 @@ export class JBNotificationWebComponent extends HTMLElement {
   initWebComponent() {
     const shadowRoot = this.attachShadow({ mode: 'open' });
     registerDefaultVariables();
-    const html = `<style>${CSS} ${VariablesCSS}</style>` + '\n' + renderHTML();
+    const html = `<style>${CSS} ${VariablesCSS}</style>\n${renderHTML()}`;
     const element = document.createElement('template');
     element.innerHTML = html;
     shadowRoot.appendChild(element.content.cloneNode(true));
@@ -82,7 +82,7 @@ export class JBNotificationWebComponent extends HTMLElement {
   static get observedAttributes() {
     return ['title', 'description', 'type'];
   }
-  attributeChangedCallback(name: string, oldValue: string, newValue: string) {
+  attributeChangedCallback(name: string, _oldValue: string, newValue: string) {
     // do something when an attribute has changed
     this.onAttributeChange(name, newValue);
   }
@@ -153,7 +153,7 @@ export class JBNotificationWebComponent extends HTMLElement {
   }
   #animateIcon() {
     if (this.#type == "SUCCESS") {
-      this.#playSucessAnimation();
+      this.#playSuccessAnimation();
     }
     if (this.#type == "INFO") {
       this.#playInfoAnimation();
@@ -166,7 +166,7 @@ export class JBNotificationWebComponent extends HTMLElement {
     }
 
   }
-  #playSucessAnimation() {
+  #playSuccessAnimation() {
     const keyframes: Keyframe[] = [
       { strokeDashoffset: "16px" },
       { strokeDashoffset: "0px" },
@@ -250,10 +250,10 @@ export class JBNotificationWebComponent extends HTMLElement {
     if (this.#timer) {
       clearInterval(this.#timer);
     }
-    this.#triggetOnCloseEvent();
+    this.#triggerOnCloseEvent();
 
   }
-  #triggetOnCloseEvent() {
+  #triggerOnCloseEvent() {
     const event = new CustomEvent("close", {});
     this.dispatchEvent(event);
   }
@@ -264,7 +264,7 @@ export class JBNotificationWebComponent extends HTMLElement {
     const event = new CustomEvent("finish", {});
     this.dispatchEvent(event);
   }
-  // add swipe to clean notif
+  // add swipe to clean notification
   initSwipe() {
     this.elements.componentWrapper.addEventListener("touchstart", this.#onTouchStart.bind(this));
     this.elements.componentWrapper.addEventListener("touchmove", this.#onTouchMove.bind(this));
@@ -306,20 +306,20 @@ export class JBNotificationWebComponent extends HTMLElement {
     }
     if (animationPromise) {
       animationPromise.then(() => {
-        this.#resetswipeGestureData();
+        this.#resetSwipeGestureData();
       });
     } else {
-      this.#resetswipeGestureData();
+      this.#resetSwipeGestureData();
     }
   }
-  #resetswipeGestureData() {
+  #resetSwipeGestureData() {
     this.#swipeGestureData.startX = null;
     this.#swipeGestureData.distance = null;
     this.#swipeGestureData.startTime = null;
     this.#swipeGestureData.endTime = null;
   }
   #moveBackToPos() {
-    //TODO: detect move direction so when user chnage direction reset start time
+    //TODO: detect move direction so when user change direction reset start time
     return new Promise((resolve) => {
       const dom = this.elements.componentWrapper;
       dom.style.transition = `transform 0.3s 0s ease`;

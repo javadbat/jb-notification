@@ -1,4 +1,14 @@
 :host{
+  /*Sizes*/
+
+  --border-radius:2.0rem;
+  --padding: 0.5rem;
+  --gap:0.25rem;
+  --title-font-weight:700;
+  --title-font-size:1.1rem;
+  --desc-font-weight:100;
+  --desc-font-size:0.8rem;
+  /*Colors*/
   --success-bg-color:var(--jb-notification-success-bg-color, var(--jb-green));
   --info-bg-color:var(--jb-notification-info-bg-color, var(--jb-primary));
   --warning-bg-color:var(--jb-yellow);

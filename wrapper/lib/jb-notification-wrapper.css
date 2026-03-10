@@ -8,7 +8,7 @@
     gap:0.5rem;
     width: 100vw;
     height: 100vh;
-    padding-top: var(--jb-notification-wrapper-padding-top, 64px);
+    padding-top: var(--jb-notification-wrapper-padding-top, 4rem);
     z-index: 9999;
     top: 0;
     left: 0; 
