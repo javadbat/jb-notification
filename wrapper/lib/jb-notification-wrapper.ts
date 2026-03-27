@@ -9,8 +9,8 @@ export class JBNotificationWrapperWebComponent extends HTMLElement {
   }
 
   initWebComponent() {
-    const shadowRoot = this.attachShadow({ mode: 'open' });
-    const html = `<style>${CSS}</style>` + '\n' + renderHTML();
+    const shadowRoot = this.attachShadow({ mode: 'open',clonable:true, serializable:true });
+    const html = `<style>${CSS}</style>\n${renderHTML()}`;
     const element = document.createElement('template');
     element.innerHTML = html;
     shadowRoot.appendChild(element.content.cloneNode(true));

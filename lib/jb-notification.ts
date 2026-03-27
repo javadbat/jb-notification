@@ -60,7 +60,7 @@ export class JBNotificationWebComponent extends HTMLElement {
   }
 
   initWebComponent() {
-    const shadowRoot = this.attachShadow({ mode: 'open' });
+    const shadowRoot = this.attachShadow({ mode: 'open', clonable:true, serializable:true });
     registerDefaultVariables();
     const html = `<style>${CSS} ${VariablesCSS}</style>\n${renderHTML()}`;
     const element = document.createElement('template');
