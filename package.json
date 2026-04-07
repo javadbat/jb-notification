@@ -30,7 +30,7 @@
     "wrapper/dist/"
   ],
   "dependencies": {
-    "jb-core":">=0.15.0"
+    "jb-core":">=0.25.0"
   },
   "main": "index.js",
   "types": "./dist/jb-notification.d.ts",

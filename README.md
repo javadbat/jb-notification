@@ -2,7 +2,8 @@
 
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/jb-notification)
 [![GitHub license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://raw.githubusercontent.com/javadbat/jb-notification/main/LICENSE)
-[![NPM Downloads](https://img.shields.io/npm/dw/jb-notification)](https://www.npmjs.com/package/jb-notification)
+[![NPM Version](https://img.shields.io/npm/v/jb-notification)](https://www.npmjs.com/package/jb-notification)
+![GitHub Created At](https://img.shields.io/github/created-at/javadbat/jb-notification)
 
 notification ui web component to show notification directly from pure js code without any framework
 
