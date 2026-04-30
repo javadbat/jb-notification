@@ -13,7 +13,7 @@ export class JBNotificationWebComponent extends HTMLElement {
   #description: string | null = null;
   #duration = 3000;
   #type: NotificationType = "INFO";
-  #internals: ElementInternals;
+  #internals!: ElementInternals;
   get title() {
     return this.#title;
   }
