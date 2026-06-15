@@ -18,6 +18,15 @@ notification ui web component to show notification directly from pure js code wi
 [code sandbox preview](https://3f63dj.csb.app/samples/jb-notification)    
 [code sandbox code](https://codesandbox.io/p/sandbox/jb-design-system-3f63dj?file=%2Fsrc%2Fsamples%2FJBNotification.tsx%3A11%2C24)
 
+## Attributes/Properties
+
+| name | type | description |
+| --- | --- | --- |
+| `title` | attribute/property | Main notification title. |
+| `description` | attribute/property | Optional detail text below the title. |
+| `type` | attribute/property | Notification type: `SUCCESS`, `ERROR`, `WARNING`, or `INFO`. |
+| `close` | event | Fired when the notification asks to be removed. |
+
 ## set title & description
 
 ```js
@@ -57,8 +66,26 @@ here is a compact sample:
   notificationDom.addEventListener("close", ()=>wrapperDom.removeChild(e.target));
   wrapperDpm.appendChild(notificationDom)
 ```
-## Other Related Docs:
 
+For wrapper-specific usage and CSS variables, see [jb-notification-wrapper README](https://javadbat.github.io/design-system/?path=/docs/components-jbnotification-wrapper-readme--docs).
+
+For manager-specific helpers, see [jb-notification-manager README](https://javadbat.github.io/design-system/?path=/docs/components-jbnotification-manager-readme--docs).
+
+## CSS Variables
+| CSS variable name | description |
+| --- | --- |
+| --jb-notification-error-bg-color | Customize error bg color. |
+| --jb-notification-info-bg-color | Customize info bg color. |
+| --jb-notification-success-bg-color | Customize success bg color. |
+
+### wrapper CSS variables
+
+| CSS variable name | description |
+| --- | --- |
+| --jb-notification-wrapper-position | Customize notification wrapper position. |
+| --jb-notification-wrapper-padding-top | Customize notification wrapper top padding. |
+
+## Related Docs
 - see [All JB Design system Component List](https://javadbat.github.io/design-system/) for more components
 
 - use [Contribution Guide](https://github.com/javadbat/design-system/blob/main/docs/contribution-guide.md) if you want to contribute in this component.
