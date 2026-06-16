@@ -19,11 +19,13 @@
   "files": [
     "LICENSE",
     "README.md",
+    "custom-elements.json",
     "lib/",
     "dist/"
   ],
   "main": "main.js",
   "types": "./dist/jb-notification-wrapper.d.ts",
+  "customElements": "custom-elements.json",
   "repository": {
 		"type": "git",
 		"url": "git@github.com:javadbat/jb-notification.git"

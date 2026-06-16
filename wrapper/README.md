@@ -1,22 +1,69 @@
 # jb-notification-wrapper
 
-`jb-notification-wrapper` is the container web component that keeps notification items positioned and stacked.
+`jb-notification-wrapper` is the container web component that stacks `jb-notification` items in a full-screen overlay.
+
+## Installation
+
+```sh
+npm i jb-notification-wrapper
+```
+
+```js
+import 'jb-notification';
+import 'jb-notification-wrapper';
+```
 
 ## Usage
+
 ```html
 <jb-notification-wrapper></jb-notification-wrapper>
 ```
 
-```ts
+```js
+const wrapper = document.querySelector('jb-notification-wrapper');
 const notification = document.createElement('jb-notification');
+
 notification.title = 'Saved';
 notification.type = 'SUCCESS';
+notification.addEventListener('close', (event) => {
+  wrapper.removeChild(event.target);
+});
 
-document.querySelector('jb-notification-wrapper')?.appendChild(notification);
+wrapper.appendChild(notification);
+notification.show();
 ```
 
-## CSS Variables
+## API reference
+
+### Slots
+
+| slot | description |
+| --- | --- |
+| default | Notification elements rendered inside the wrapper. |
+
+### CSS variables
+
 | CSS variable name | description |
 | --- | --- |
-| --jb-notification-wrapper-position | Notification wrapper position. |
-| --jb-notification-wrapper-padding-top | Notification wrapper top padding. |
+| `--jb-notification-wrapper-position` | Wrapper CSS `position` value. |
+| `--jb-notification-wrapper-padding-top` | Wrapper top padding. |
+
+```css
+jb-notification-wrapper {
+  --jb-notification-wrapper-position: fixed;
+  --jb-notification-wrapper-padding-top: 5rem;
+}
+```
+
+## Related components
+
+- [`jb-notification`](https://github.com/javadbat/jb-notification)
+- [`jb-notification-manager`](https://github.com/javadbat/jb-notification/tree/main/manager)
+
+## AI agent notes
+
+- Import `jb-notification-wrapper` before using `<jb-notification-wrapper>`.
+- Append `jb-notification` elements to the wrapper and call `notification.show()`.
+- Listen to each notification `close` event and remove that notification from the wrapper.
+- The observed `x-position` and `y-position` attributes are reserved in source but do not currently change wrapper layout.
+- This package includes [`custom-elements.json`](./custom-elements.json) and points to it with the package.json `customElements` field.

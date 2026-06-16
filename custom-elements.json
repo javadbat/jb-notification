@@ -1,0 +1,291 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "README.md",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "lib/jb-notification.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "Animated notification and toast web component with typed visual states, swipe-to-dismiss behavior, and close events for wrapper cleanup.",
+          "name": "JBNotificationWebComponent",
+          "tagName": "jb-notification",
+          "customElement": true,
+          "superclass": {
+            "name": "HTMLElement"
+          },
+          "attributes": [
+            {
+              "name": "title",
+              "description": "Main notification title.",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "name": "description",
+              "description": "Optional detail text below the title.",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "name": "type",
+              "description": "Notification visual type. Accepted values are INFO, SUCCESS, WARNING, and ERROR.",
+              "type": {
+                "text": "'INFO' | 'SUCCESS' | 'WARNING' | 'ERROR'"
+              },
+              "default": "INFO"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "title",
+              "description": "Main notification title.",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "description",
+              "description": "Optional detail text below the title.",
+              "type": {
+                "text": "string | null"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "description": "Notification visual type.",
+              "type": {
+                "text": "NotificationType"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "state",
+              "description": "Current notification state.",
+              "type": {
+                "text": "'OPEN' | 'CLOSE'"
+              },
+              "readonly": true
+            }
+          ],
+          "methods": [
+            {
+              "name": "show",
+              "description": "Shows the notification, starts the show animation, and schedules hide after the internal duration."
+            },
+            {
+              "name": "hide",
+              "description": "Starts the hide animation and dispatches close after the animation completes."
+            },
+            {
+              "name": "onClose",
+              "description": "Sets state to CLOSE, clears the timer, and dispatches close."
+            }
+          ],
+          "events": [
+            {
+              "name": "close",
+              "description": "Dispatched when the notification finishes closing or is dismissed by swipe."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "content",
+              "description": "Notification content box."
+            },
+            {
+              "name": "icon",
+              "description": "Icon container."
+            },
+            {
+              "name": "title",
+              "description": "Title text element."
+            },
+            {
+              "name": "description",
+              "description": "Description text element."
+            }
+          ],
+          "cssProperties": [
+            {
+              "name": "--jb-notification-error-bg-color",
+              "description": "Error notification background color."
+            },
+            {
+              "name": "--jb-notification-info-bg-color",
+              "description": "Info notification background color."
+            },
+            {
+              "name": "--jb-notification-success-bg-color",
+              "description": "Success notification background color."
+            }
+          ]
+        },
+        {
+          "kind": "variable",
+          "name": "notificationTypes",
+          "description": "Allowed notification type values.",
+          "type": {
+            "text": "NotificationType[]"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "JBNotificationWebComponent",
+          "declaration": {
+            "name": "JBNotificationWebComponent",
+            "module": "lib/jb-notification.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "notificationTypes",
+          "declaration": {
+            "name": "notificationTypes",
+            "module": "lib/jb-notification.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "jb-notification",
+          "declaration": {
+            "name": "JBNotificationWebComponent",
+            "module": "lib/jb-notification.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "wrapper/lib/jb-notification-wrapper.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "Full-screen notification wrapper that stacks slotted jb-notification elements.",
+          "name": "JBNotificationWrapperWebComponent",
+          "tagName": "jb-notification-wrapper",
+          "customElement": true,
+          "superclass": {
+            "name": "HTMLElement"
+          },
+          "attributes": [
+            {
+              "name": "x-position",
+              "description": "Reserved observed attribute. The current implementation does not apply positioning behavior from this attribute.",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "name": "y-position",
+              "description": "Reserved observed attribute. The current implementation does not apply positioning behavior from this attribute.",
+              "type": {
+                "text": "string"
+              }
+            }
+          ],
+          "slots": [
+            {
+              "name": "",
+              "description": "Notification elements rendered inside the wrapper."
+            }
+          ],
+          "cssProperties": [
+            {
+              "name": "--jb-notification-wrapper-position",
+              "description": "Wrapper CSS position value."
+            },
+            {
+              "name": "--jb-notification-wrapper-padding-top",
+              "description": "Wrapper top padding."
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "JBNotificationWrapperWebComponent",
+          "declaration": {
+            "name": "JBNotificationWrapperWebComponent",
+            "module": "wrapper/lib/jb-notification-wrapper.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "jb-notification-wrapper",
+          "declaration": {
+            "name": "JBNotificationWrapperWebComponent",
+            "module": "wrapper/lib/jb-notification-wrapper.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "manager/lib/jb-notification-manager.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "JavaScript helper that creates a notification wrapper, appends notifications, shows them, and removes them after close.",
+          "name": "NotificationManager",
+          "members": [
+            {
+              "kind": "field",
+              "name": "wrapperDom",
+              "description": "The wrapper element created and appended to document.body.",
+              "type": {
+                "text": "JBNotificationWrapperWebComponent"
+              },
+              "readonly": true
+            }
+          ],
+          "methods": [
+            {
+              "name": "new",
+              "description": "Creates and shows a notification.",
+              "parameters": [
+                {
+                  "name": "params",
+                  "type": {
+                    "text": "NewNotificationProps"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "onNotificationClose",
+              "description": "Removes the closed notification from the wrapper.",
+              "parameters": [
+                {
+                  "name": "e",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "NotificationManager",
+          "declaration": {
+            "name": "NotificationManager",
+            "module": "manager/lib/jb-notification-manager.ts"
+          }
+        }
+      ]
+    }
+  ]
+}

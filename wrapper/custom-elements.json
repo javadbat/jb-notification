@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "README.md",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "lib/jb-notification-wrapper.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "Full-screen notification wrapper that stacks slotted jb-notification elements.",
+          "name": "JBNotificationWrapperWebComponent",
+          "tagName": "jb-notification-wrapper",
+          "customElement": true,
+          "superclass": {
+            "name": "HTMLElement"
+          },
+          "attributes": [
+            {
+              "name": "x-position",
+              "description": "Reserved observed attribute. The current implementation does not apply positioning behavior from this attribute.",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "name": "y-position",
+              "description": "Reserved observed attribute. The current implementation does not apply positioning behavior from this attribute.",
+              "type": {
+                "text": "string"
+              }
+            }
+          ],
+          "slots": [
+            {
+              "name": "",
+              "description": "Notification elements rendered inside the wrapper."
+            }
+          ],
+          "cssProperties": [
+            {
+              "name": "--jb-notification-wrapper-position",
+              "description": "Wrapper CSS position value."
+            },
+            {
+              "name": "--jb-notification-wrapper-padding-top",
+              "description": "Wrapper top padding."
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "JBNotificationWrapperWebComponent",
+          "declaration": {
+            "name": "JBNotificationWrapperWebComponent",
+            "module": "lib/jb-notification-wrapper.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "jb-notification-wrapper",
+          "declaration": {
+            "name": "JBNotificationWrapperWebComponent",
+            "module": "lib/jb-notification-wrapper.ts"
+          }
+        }
+      ]
+    }
+  ]
+}

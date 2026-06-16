@@ -23,6 +23,7 @@
   "files": [
     "LICENSE",
     "README.md",
+    "custom-elements.json",
     "lib/",
     "dist/",
     "manager/",
@@ -30,10 +31,11 @@
     "wrapper/dist/"
   ],
   "dependencies": {
-    "jb-core":">=0.25.0"
+    "jb-core":">=0.27.2"
   },
   "main": "index.js",
   "types": "./dist/jb-notification.d.ts",
+  "customElements": "custom-elements.json",
   "repository": {
 		"type": "git",
 		"url": "git@github.com:javadbat/jb-notification.git"
