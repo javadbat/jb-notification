@@ -6,7 +6,7 @@ import { JBNotificationWrapperWebComponent } from 'jb-notification/wrapper';
 import { type JBNotificationWebComponent, type NotificationType } from 'jb-notification';
 // new messaging system
 export class NotificationManager {
-  #wrapperDom: JBNotificationWrapperWebComponent;
+  #wrapperDom!: JBNotificationWrapperWebComponent;
   get wrapperDom() {
     return this.#wrapperDom;
   }
