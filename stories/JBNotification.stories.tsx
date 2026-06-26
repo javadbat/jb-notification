@@ -5,12 +5,12 @@ import './styles/jb-notification-styles.css';
 import { NotificationManager } from 'jb-notification/manager';
 
 const notificationManager = new NotificationManager();
-const meta: Meta<unknown> = {
+const meta = {
   title: "Components/JBNotification",
   // component: JBNotificationWebComponent,
-};
+} satisfies Meta;
 export default meta;
-type Story = StoryObj<any>;
+type Story = StoryObj<typeof meta>;
 
 export const ActionTest: Story = {
   render: () => {
