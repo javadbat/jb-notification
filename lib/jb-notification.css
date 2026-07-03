@@ -97,7 +97,7 @@
                             stroke: var(--symbol-color);
                             stroke-width: 3px;
                             stroke-linecap: round;
-                            stroke-dasharray: 7px 7px;
+                            stroke-dasharray: 0.4375rem 0.4375rem;
                         }
                     }
                     &.error-symbol{
@@ -106,13 +106,13 @@
                             stroke: var(--symbol-color);
                             stroke-width: 3px;
                             stroke-linecap: round;
-                            stroke-dasharray: 12px 12px;
+                            stroke-dasharray: 0.75rem 0.75rem;
                         }
                         .line2{
                             stroke: var(--symbol-color);
                             stroke-width: 3px;
                             stroke-linecap: round;
-                            stroke-dasharray: 12px 12px;
+                            stroke-dasharray: 0.75rem 0.75rem;
                         }
                     }
                     &.success-symbol{
@@ -122,7 +122,7 @@
                             stroke-width: 3px;
                             stroke-linecap: round;
                             stroke-linejoin: round;
-                            stroke-dasharray: 16px 16px;
+                            stroke-dasharray: 1rem 1rem;
                         }
                     }
                 }

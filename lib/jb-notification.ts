@@ -168,7 +168,7 @@ export class JBNotificationWebComponent extends HTMLElement {
   }
   #playSuccessAnimation() {
     const keyframes: Keyframe[] = [
-      { strokeDashoffset: "16px" },
+      { strokeDashoffset: "1rem" },
       { strokeDashoffset: "0px" },
     ];
     this.elements.icon.successSymbol.querySelector('.tik')!.animate(keyframes, { duration: 600, delay: 0, iterations: 1, easing: "cubic-bezier(0.925, 0.055, 0.595, 0.895)", composite: 'replace' });
@@ -204,7 +204,7 @@ export class JBNotificationWebComponent extends HTMLElement {
     dotAnime.pause();
 
     const lineKeyframes: Keyframe[] = [
-      { strokeDashoffset: "7px" },
+      { strokeDashoffset: "0.4375rem" },
       { strokeDashoffset: "0px" },
     ];
     this.elements.icon.warningSymbol.querySelector('.ri-line')!.animate(lineKeyframes, { duration: 500, delay: 0, iterations: 1, easing: "cubic-bezier(0.925, 0.055, 0.595, 0.895)", composite: 'replace' }).addEventListener("finish", () => {
@@ -213,7 +213,7 @@ export class JBNotificationWebComponent extends HTMLElement {
   }
   #playErrorAnimation() {
     const keyframes: Keyframe[] = [
-      { strokeDashoffset: "12px" },
+      { strokeDashoffset: "0.75rem" },
       { strokeDashoffset: "0px" },
     ]
     const animeConfig: KeyframeAnimationOptions = { duration: 600, delay: 0, iterations: 1, easing: "cubic-bezier(0.860, 0.000, 0.070, 1.000)", composite: 'replace' };

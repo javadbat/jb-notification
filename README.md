@@ -166,7 +166,7 @@ For manager-specific helpers, see [jb-notification-manager README](https://javad
 
 ```css
 jb-notification::part(content) {
-  border-radius: 12px;
+  border-radius: 0.75rem;
 }
 
 jb-notification {
