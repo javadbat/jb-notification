@@ -1,13 +1,13 @@
 :host{
   /* Size */
 
-  --border-radius:2.0rem;
-  --padding: 0.5rem;
-  --gap:0.25rem;
-  --title-font-weight:700;
-  --title-font-size:1.1rem;
-  --desc-font-weight:100;
-  --desc-font-size:0.8rem;
+  --border-radius: var(--jb-notification-border-radius, 2.0rem);
+  --padding: var(--jb-notification-padding, 0.5rem);
+  --gap: var(--jb-notification-gap, 0.25rem);
+  --title-font-weight: var(--jb-notification-title-font-weight, 700);
+  --title-font-size: var(--jb-notification-title-font-size, 1.1rem);
+  --desc-font-weight: var(--jb-notification-desc-font-weight, 100);
+  --desc-font-size: var(--jb-notification-desc-font-size, 0.8rem);
   /* Theme/Color */
   --bg-color-success:var(--jb-notification-bg-color-success, var(--jb-green));
   --bg-color-info:var(--jb-notification-bg-color-info, var(--jb-primary));
@@ -15,8 +15,8 @@
   --bg-color-error:var(--jb-notification-bg-color-error, var(--jb-red));
   /* Theme/Color */
   --text-color: var(--jb-text-contrast);
-  --text-color-info:var(--text-color);
-  --text-color-success:var(--text-color);
-  --text-color-warning:var(--text-color);
-  --text-color-error:var(--text-color);
+  --text-color-info: var(--jb-notification-text-color-info, var(--text-color));
+  --text-color-success: var(--jb-notification-text-color-success, var(--text-color));
+  --text-color-warning: var(--jb-notification-text-color-warning, var(--text-color));
+  --text-color-error: var(--jb-notification-text-color-error, var(--text-color));
 }

@@ -158,10 +158,21 @@ For manager-specific helpers, see [jb-notification-manager README](https://javad
 
 | CSS variable name | description |
 | --- | --- |
+| `--jb-notification-border-radius` | Notification content border radius. |
 | `--jb-notification-bg-color-error` | Error notification background color. |
 | `--jb-notification-bg-color-info` | Info notification background color. |
 | `--jb-notification-bg-color-success` | Success notification background color. |
 | `--jb-notification-bg-color-warning` | Warning notification background color. |
+| `--jb-notification-desc-font-size` | Description font size. |
+| `--jb-notification-desc-font-weight` | Description font weight. |
+| `--jb-notification-gap` | Gap between notification content items. |
+| `--jb-notification-padding` | Notification content padding. |
+| `--jb-notification-text-color-error` | Error notification text color. |
+| `--jb-notification-text-color-info` | Info notification text color. |
+| `--jb-notification-text-color-success` | Success notification text color. |
+| `--jb-notification-text-color-warning` | Warning notification text color. |
+| `--jb-notification-title-font-size` | Title font size. |
+| `--jb-notification-title-font-weight` | Title font weight. |
 | `--jb-notification-wrapper-align-items` | Wrapper flex alignment. |
 | `--jb-notification-wrapper-display` | Wrapper display value. |
 | `--jb-notification-wrapper-flex-direction` | Wrapper flex direction. |

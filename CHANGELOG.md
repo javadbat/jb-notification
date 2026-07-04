@@ -10,3 +10,4 @@
   - `--jb-notification-error-bg-color` is now `--jb-notification-bg-color-error`.
   - Added `--jb-notification-bg-color-warning` for the warning state.
 - Moved notification wrapper layout defaults into `wrapper/lib/variables.css` and documented the wrapper CSS variables.
+- Added public content sizing and state text-color variables.
