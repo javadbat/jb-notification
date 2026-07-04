@@ -3,8 +3,9 @@ import type { ReactComponentBuildConfig, WebComponentBuildConfig } from "../../t
 export const webComponentList: WebComponentBuildConfig[] = [
   {
     name: "jb-notification",
-    path: "./lib/jb-notification.ts",
-    outputPath: "./dist/jb-notification.js",
+    path: "./web-component/lib/jb-notification.ts",
+    outputPath: "./web-component/dist/jb-notification.js",
+    tsConfigPath: "./web-component/tsconfig.json",
     umdName: "JBNotification",
     external: ["jb-core","jb-core/theme"],
     globals: {},

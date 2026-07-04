@@ -1,1 +1,1 @@
-import './dist/jb-notification.js';
+import './web-component/dist/jb-notification.js';
