@@ -1,0 +1,18 @@
+:host {
+    /* Size */
+    --gap: var(--jb-notification-wrapper-gap, 0.5rem);
+    --width: var(--jb-notification-wrapper-width, 100vw);
+    --height: var(--jb-notification-wrapper-height, 100vh);
+    --padding-top: var(--jb-notification-wrapper-padding-top, 4rem);
+    --z-index: var(--jb-notification-wrapper-z-index, 9999);
+    --top: var(--jb-notification-wrapper-top, 0);
+    --left: var(--jb-notification-wrapper-left, 0);
+
+    /* Other */
+    --position: var(--jb-notification-wrapper-position, absolute);
+    --overflow: var(--jb-notification-wrapper-overflow, hidden);
+    --display: var(--jb-notification-wrapper-display, flex);
+    --align-items: var(--jb-notification-wrapper-align-items, center);
+    --flex-direction: var(--jb-notification-wrapper-flex-direction, column);
+    --pointer-events: var(--jb-notification-wrapper-pointer-events, none);
+}

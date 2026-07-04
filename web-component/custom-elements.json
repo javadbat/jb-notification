@@ -114,16 +114,20 @@
           ],
           "cssProperties": [
             {
-              "name": "--jb-notification-error-bg-color",
+              "name": "--jb-notification-bg-color-error",
               "description": "Error notification background color."
             },
             {
-              "name": "--jb-notification-info-bg-color",
+              "name": "--jb-notification-bg-color-info",
               "description": "Info notification background color."
             },
             {
-              "name": "--jb-notification-success-bg-color",
+              "name": "--jb-notification-bg-color-success",
               "description": "Success notification background color."
+            },
+            {
+              "name": "--jb-notification-bg-color-warning",
+              "description": "Warning notification background color."
             }
           ]
         },
@@ -200,12 +204,56 @@
           ],
           "cssProperties": [
             {
+              "name": "--jb-notification-wrapper-align-items",
+              "description": "Wrapper flex alignment."
+            },
+            {
+              "name": "--jb-notification-wrapper-display",
+              "description": "Wrapper display value."
+            },
+            {
+              "name": "--jb-notification-wrapper-flex-direction",
+              "description": "Wrapper flex direction."
+            },
+            {
+              "name": "--jb-notification-wrapper-gap",
+              "description": "Gap between notifications."
+            },
+            {
+              "name": "--jb-notification-wrapper-height",
+              "description": "Wrapper height."
+            },
+            {
+              "name": "--jb-notification-wrapper-left",
+              "description": "Wrapper left offset."
+            },
+            {
+              "name": "--jb-notification-wrapper-overflow",
+              "description": "Wrapper overflow value."
+            },
+            {
               "name": "--jb-notification-wrapper-position",
               "description": "Wrapper CSS position value."
             },
             {
               "name": "--jb-notification-wrapper-padding-top",
               "description": "Wrapper top padding."
+            },
+            {
+              "name": "--jb-notification-wrapper-pointer-events",
+              "description": "Wrapper pointer events value."
+            },
+            {
+              "name": "--jb-notification-wrapper-top",
+              "description": "Wrapper top offset."
+            },
+            {
+              "name": "--jb-notification-wrapper-width",
+              "description": "Wrapper width."
+            },
+            {
+              "name": "--jb-notification-wrapper-z-index",
+              "description": "Wrapper z-index."
             }
           ]
         }

@@ -11,37 +11,37 @@
     }
     &.--info{
         .notification-content{
-            background-color: var(--info-bg-color);
+            background-color: var(--bg-color-info);
         }
         .message-texts-wrapper{
-            color:var(--info-text-color);
+            color:var(--text-color-info);
         }
         
     }
     &.--warning{
         .notification-content{
-            background-color: var(--warning-bg-color);
+            background-color: var(--bg-color-warning);
         }
         .message-texts-wrapper{
-            color:var(--warning-text-color);
+            color:var(--text-color-warning);
         }
         
     }
     &.--success{
         .notification-content{
-            background-color: var(--success-bg-color);
+            background-color: var(--bg-color-success);
         }
         .message-texts-wrapper{
-            color:var(--success-text-color);
+            color:var(--text-color-success);
         }
         
     }
     &.--error{
         .notification-content{
-           background-color: var(--error-bg-color); 
+           background-color: var(--bg-color-error);
         }
         .message-texts-wrapper{
-            color:var(--error-text-color);
+            color:var(--text-color-error);
         }
         
     }
@@ -73,7 +73,7 @@
                         display: none;
                     }
                     &.info-symbol{
-                        --symbol-color:var(--info-bg-color);
+                        --symbol-color:var(--bg-color-info);
                         .i-dot{
                             stroke: var(--symbol-color);
                             stroke-width: 3px;
@@ -87,7 +87,7 @@
                         }
                     }
                     &.warning-symbol{
-                        --symbol-color:var(--warning-bg-color);
+                        --symbol-color:var(--bg-color-warning);
                         .ri-dot{
                             stroke: var(--symbol-color);
                             stroke-width: 3px;
@@ -101,7 +101,7 @@
                         }
                     }
                     &.error-symbol{
-                        --symbol-color:var(--error-bg-color);
+                        --symbol-color:var(--bg-color-error);
                         .line1{
                             stroke: var(--symbol-color);
                             stroke-width: 3px;
@@ -116,7 +116,7 @@
                         }
                     }
                     &.success-symbol{
-                        --symbol-color:var(--success-bg-color);
+                        --symbol-color:var(--bg-color-success);
                         .tik{
                             stroke: var(--symbol-color);
                             stroke-width: 3px;

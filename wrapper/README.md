@@ -45,8 +45,19 @@ notification.show();
 
 | CSS variable name | description |
 | --- | --- |
-| `--jb-notification-wrapper-position` | Wrapper CSS `position` value. |
+| `--jb-notification-wrapper-align-items` | Wrapper flex alignment. |
+| `--jb-notification-wrapper-display` | Wrapper display value. |
+| `--jb-notification-wrapper-flex-direction` | Wrapper flex direction. |
+| `--jb-notification-wrapper-gap` | Gap between notifications. |
+| `--jb-notification-wrapper-height` | Wrapper height. |
+| `--jb-notification-wrapper-left` | Wrapper left offset. |
+| `--jb-notification-wrapper-overflow` | Wrapper overflow value. |
 | `--jb-notification-wrapper-padding-top` | Wrapper top padding. |
+| `--jb-notification-wrapper-pointer-events` | Wrapper pointer events value. |
+| `--jb-notification-wrapper-position` | Wrapper CSS `position` value. |
+| `--jb-notification-wrapper-top` | Wrapper top offset. |
+| `--jb-notification-wrapper-width` | Wrapper width. |
+| `--jb-notification-wrapper-z-index` | Wrapper z-index. |
 
 ```css
 jb-notification-wrapper {
