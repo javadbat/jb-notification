@@ -1,0 +1,38 @@
+.notification-demo-stack {
+  display: grid;
+  gap: 0.65rem;
+}
+
+jb-notification.forest-style {
+  --jb-notification-width: 100%;
+  --jb-notification-max-width: 100%;
+  --jb-notification-padding: 0.8rem 0.95rem;
+  --jb-notification-border-radius: 1rem;
+  --jb-notification-gap: 0.8rem;
+  --jb-notification-text-gap: 0.15rem;
+  --jb-notification-icon-size: 2.35rem;
+  --jb-notification-title-font-size: 0.92rem;
+  --jb-notification-title-font-weight: 800;
+  --jb-notification-desc-font-size: 0.78rem;
+  --jb-notification-desc-font-weight: 500;
+  --jb-notification-bg-color-success: #173f2e;
+  --jb-notification-bg-color-info: #1e3b34;
+  --jb-notification-bg-color-warning: #5f481c;
+  --jb-notification-bg-color-error: #613032;
+  --jb-notification-text-color-success: #d9f8df;
+  --jb-notification-text-color-info: #e7f1dd;
+  --jb-notification-text-color-warning: #ffe6a7;
+  --jb-notification-text-color-error: #ffd6d8;
+  --jb-notification-icon-bg-color: #f4e7bb;
+  --jb-notification-border-width: 1px;
+  --jb-notification-border-color: rgb(244 231 187 / 0.28);
+  --jb-notification-box-shadow: 0 1rem 2rem rgb(9 35 24 / 0.28);
+}
+
+jb-notification.forest-style::part(component) {
+  display: block;
+}
+
+jb-notification.forest-style::part(icon) {
+  filter: drop-shadow(0 0.25rem 0.35rem rgb(0 0 0 / 0.2));
+}

@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+### Added
+
+- Added `component`, `icon-svg`, and `texts` CSS parts for richer notification styling.
+- Added `success`, `info`, `warning`, `error`, `open`, and `closed` custom CSS states.
+- Added notification width, max-width, icon size, text gap, border, shadow, grid, and content alignment variables.
+- Added state-specific icon symbol color variables for accessible icon contrast.
+- Added a standard Styling MDX page and 12 reusable notification style recipes.
+
 ### Changed
 
 - Breaking: renamed notification background CSS variables to use `--jb-notification-bg-color-{state}`.
@@ -11,3 +19,4 @@
   - Added `--jb-notification-bg-color-warning` for the warning state.
 - Moved notification wrapper layout defaults into `wrapper/lib/variables.css` and documented the wrapper CSS variables.
 - Added public content sizing and state text-color variables.
+- Standardized all custom theme recipes on `jb-notification.<theme>-style`, public parts, and custom-state selectors.

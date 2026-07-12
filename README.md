@@ -149,24 +149,53 @@ For manager-specific helpers, see [jb-notification-manager README](https://javad
 
 ## CSS parts and custom style
 
+For complete styling guidance, live examples, and copyable style recipes, see [Styling](https://javadbat.github.io/design-system/?path=/docs/components-jbnotification-styling).
+
 | part | description |
 | --- | --- |
+| `component` | Outer notification wrapper. |
 | `content` | Notification content box. |
 | `icon` | Icon container. |
+| `icon-svg` | Notification SVG icon. |
+| `texts` | Title and description wrapper. |
 | `title` | Title text element. |
 | `description` | Description text element. |
 
+| CSS state | description |
+| --- | --- |
+| `success` | Applied when `type` is `SUCCESS`. |
+| `info` | Applied when `type` is `INFO`. |
+| `warning` | Applied when `type` is `WARNING`. |
+| `error` | Applied when `type` is `ERROR`. |
+| `open` | Applied while the notification is visible. |
+| `closed` | Applied while the notification is closed. |
+
 | CSS variable name | description |
 | --- | --- |
+| `--jb-notification-width` | Host and content width. |
+| `--jb-notification-max-width` | Host and content maximum width. |
 | `--jb-notification-border-radius` | Notification content border radius. |
 | `--jb-notification-bg-color-error` | Error notification background color. |
 | `--jb-notification-bg-color-info` | Info notification background color. |
 | `--jb-notification-bg-color-success` | Success notification background color. |
 | `--jb-notification-bg-color-warning` | Warning notification background color. |
+| `--jb-notification-border-color` | Notification content border color. |
+| `--jb-notification-border-style` | Notification content border style. |
+| `--jb-notification-border-width` | Notification content border width. |
+| `--jb-notification-box-shadow` | Notification content shadow. |
+| `--jb-notification-content-align-items` | Notification content grid alignment. |
 | `--jb-notification-desc-font-size` | Description font size. |
 | `--jb-notification-desc-font-weight` | Description font weight. |
 | `--jb-notification-gap` | Gap between notification content items. |
+| `--jb-notification-grid-template-columns` | Notification content grid columns. |
+| `--jb-notification-icon-bg-color` | Icon badge background color. |
+| `--jb-notification-icon-symbol-color-error` | Error icon symbol color. |
+| `--jb-notification-icon-symbol-color-info` | Info icon symbol color. |
+| `--jb-notification-icon-symbol-color-success` | Success icon symbol color. |
+| `--jb-notification-icon-symbol-color-warning` | Warning icon symbol color. |
+| `--jb-notification-icon-size` | Icon container width and height. |
 | `--jb-notification-padding` | Notification content padding. |
+| `--jb-notification-text-gap` | Gap between title and description. |
 | `--jb-notification-text-color-error` | Error notification text color. |
 | `--jb-notification-text-color-info` | Info notification text color. |
 | `--jb-notification-text-color-success` | Success notification text color. |

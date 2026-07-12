@@ -1,0 +1,41 @@
+.notification-demo-stack {
+  display: grid;
+  gap: 0.65rem;
+}
+
+jb-notification.cupertino-style {
+  --jb-notification-width: 100%;
+  --jb-notification-max-width: 100%;
+  --jb-notification-padding: 0.8rem 0.95rem;
+  --jb-notification-border-radius: 0.875rem;
+  --jb-notification-gap: 0.75rem;
+  --jb-notification-icon-size: 2.25rem;
+  --jb-notification-title-font-size: 0.9rem;
+  --jb-notification-title-font-weight: 700;
+  --jb-notification-desc-font-size: 0.78rem;
+  --jb-notification-desc-font-weight: 400;
+  --jb-notification-bg-color-success: #e5f8ed;
+  --jb-notification-bg-color-info: #e9f4ff;
+  --jb-notification-bg-color-warning: #fff5d8;
+  --jb-notification-bg-color-error: #ffe8e8;
+  --jb-notification-text-color-success: #1f7a3d;
+  --jb-notification-text-color-info: #0a66c2;
+  --jb-notification-text-color-warning: #8a5a00;
+  --jb-notification-text-color-error: #c62828;
+  --jb-notification-icon-bg-color: rgb(255 255 255 / 0.92);
+  --jb-notification-icon-symbol-color-success: #34c759;
+  --jb-notification-icon-symbol-color-info: var(--jb-focus-color);
+  --jb-notification-icon-symbol-color-warning: #ff9500;
+  --jb-notification-icon-symbol-color-error: var(--jb-success);
+  --jb-notification-border-width: 1px;
+  --jb-notification-border-color: rgb(60 60 67 / 0.14);
+  --jb-notification-box-shadow: 0 0.75rem 1.75rem rgb(60 60 67 / 0.14);
+}
+
+jb-notification.cupertino-style::part(component) {
+  display: block;
+}
+
+jb-notification.cupertino-style::part(content) {
+  backdrop-filter: saturate(180%) blur(1rem);
+}

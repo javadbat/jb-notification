@@ -1,0 +1,41 @@
+.notification-demo-stack {
+  display: grid;
+  gap: 0.65rem;
+}
+
+jb-notification.ant-design-style {
+  --jb-notification-width: 100%;
+  --jb-notification-max-width: 100%;
+  --jb-notification-padding: 0.75rem 0.95rem;
+  --jb-notification-border-radius: 0.5rem;
+  --jb-notification-gap: 0.75rem;
+  --jb-notification-icon-size: 2.15rem;
+  --jb-notification-title-font-size: 0.9rem;
+  --jb-notification-title-font-weight: 600;
+  --jb-notification-desc-font-size: 0.78rem;
+  --jb-notification-desc-font-weight: 400;
+  --jb-notification-bg-color-success: #f6ffed;
+  --jb-notification-bg-color-info: var(--jb-surface-hover);
+  --jb-notification-bg-color-warning: #fffbe6;
+  --jb-notification-bg-color-error: #fff2f0;
+  --jb-notification-text-color-success: #237804;
+  --jb-notification-text-color-info: var(--jb-primary-pressed);
+  --jb-notification-text-color-warning: #ad6800;
+  --jb-notification-text-color-error: #cf1322;
+  --jb-notification-icon-bg-color: var(--jb-surface);
+  --jb-notification-icon-symbol-color-success: var(--jb-success);
+  --jb-notification-icon-symbol-color-info: var(--jb-focus-color);
+  --jb-notification-icon-symbol-color-warning: #faad14;
+  --jb-notification-icon-symbol-color-error: #ff4d4f;
+  --jb-notification-border-width: 1px;
+  --jb-notification-border-color: #d9d9d9;
+  --jb-notification-box-shadow: 0 0.4rem 1rem rgb(0 0 0 / 0.08);
+}
+
+jb-notification.ant-design-style::part(component) {
+  display: block;
+}
+
+jb-notification.ant-design-style::part(content) {
+  border-inline-start-width: 0.25rem;
+}

@@ -1,0 +1,37 @@
+.notification-demo-stack {
+  display: grid;
+  gap: 0.65rem;
+}
+
+jb-notification.candy-style {
+  --jb-notification-width: 100%;
+  --jb-notification-max-width: 100%;
+  --jb-notification-padding: 0.75rem 0.95rem;
+  --jb-notification-border-radius: 1.4rem;
+  --jb-notification-gap: 0.75rem;
+  --jb-notification-icon-size: 2.4rem;
+  --jb-notification-title-font-size: 0.95rem;
+  --jb-notification-title-font-weight: 800;
+  --jb-notification-desc-font-size: 0.8rem;
+  --jb-notification-desc-font-weight: 500;
+  --jb-notification-bg-color-success: #c8f7dc;
+  --jb-notification-bg-color-info: #d8efff;
+  --jb-notification-bg-color-warning: #ffe8a8;
+  --jb-notification-bg-color-error: #ffd1e4;
+  --jb-notification-text-color-success: #075f3b;
+  --jb-notification-text-color-info: #0a4e80;
+  --jb-notification-text-color-warning: #7a4e00;
+  --jb-notification-text-color-error: #8f174f;
+  --jb-notification-icon-bg-color: var(--jb-text-contrast);
+  --jb-notification-border-width: 2px;
+  --jb-notification-border-color: rgb(255 255 255 / 0.88);
+  --jb-notification-box-shadow: 0 0.75rem 1.5rem rgb(244 114 182 / 0.2);
+}
+
+jb-notification.candy-style::part(component) {
+  display: block;
+}
+
+jb-notification.candy-style::part(content) {
+  overflow: hidden;
+}

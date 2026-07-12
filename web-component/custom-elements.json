@@ -96,12 +96,24 @@
           ],
           "cssParts": [
             {
+              "name": "component",
+              "description": "Outer notification wrapper."
+            },
+            {
               "name": "content",
               "description": "Notification content box."
             },
             {
               "name": "icon",
               "description": "Icon container."
+            },
+            {
+              "name": "icon-svg",
+              "description": "Notification SVG icon."
+            },
+            {
+              "name": "texts",
+              "description": "Title and description wrapper."
             },
             {
               "name": "title",
@@ -112,7 +124,77 @@
               "description": "Description text element."
             }
           ],
+          "cssStates": [
+            {
+              "name": "success",
+              "description": "Applied when type is SUCCESS."
+            },
+            {
+              "name": "info",
+              "description": "Applied when type is INFO."
+            },
+            {
+              "name": "warning",
+              "description": "Applied when type is WARNING."
+            },
+            {
+              "name": "error",
+              "description": "Applied when type is ERROR."
+            },
+            {
+              "name": "open",
+              "description": "Applied while the notification is visible."
+            },
+            {
+              "name": "closed",
+              "description": "Applied while the notification is closed."
+            }
+          ],
           "cssProperties": [
+            {
+              "name": "--jb-notification-width",
+              "description": "Host and content width."
+            },
+            {
+              "name": "--jb-notification-max-width",
+              "description": "Host and content maximum width."
+            },
+            {
+              "name": "--jb-notification-border-radius",
+              "description": "Notification content border radius."
+            },
+            {
+              "name": "--jb-notification-padding",
+              "description": "Notification content padding."
+            },
+            {
+              "name": "--jb-notification-gap",
+              "description": "Gap between notification content items."
+            },
+            {
+              "name": "--jb-notification-text-gap",
+              "description": "Gap between title and description."
+            },
+            {
+              "name": "--jb-notification-icon-size",
+              "description": "Icon container width and height."
+            },
+            {
+              "name": "--jb-notification-title-font-size",
+              "description": "Title font size."
+            },
+            {
+              "name": "--jb-notification-title-font-weight",
+              "description": "Title font weight."
+            },
+            {
+              "name": "--jb-notification-desc-font-size",
+              "description": "Description font size."
+            },
+            {
+              "name": "--jb-notification-desc-font-weight",
+              "description": "Description font weight."
+            },
             {
               "name": "--jb-notification-bg-color-error",
               "description": "Error notification background color."
@@ -128,6 +210,66 @@
             {
               "name": "--jb-notification-bg-color-warning",
               "description": "Warning notification background color."
+            },
+            {
+              "name": "--jb-notification-text-color-error",
+              "description": "Error notification text color."
+            },
+            {
+              "name": "--jb-notification-text-color-info",
+              "description": "Info notification text color."
+            },
+            {
+              "name": "--jb-notification-text-color-success",
+              "description": "Success notification text color."
+            },
+            {
+              "name": "--jb-notification-text-color-warning",
+              "description": "Warning notification text color."
+            },
+            {
+              "name": "--jb-notification-icon-bg-color",
+              "description": "Icon badge background color."
+            },
+            {
+              "name": "--jb-notification-icon-symbol-color-success",
+              "description": "Success icon symbol color."
+            },
+            {
+              "name": "--jb-notification-icon-symbol-color-info",
+              "description": "Info icon symbol color."
+            },
+            {
+              "name": "--jb-notification-icon-symbol-color-warning",
+              "description": "Warning icon symbol color."
+            },
+            {
+              "name": "--jb-notification-icon-symbol-color-error",
+              "description": "Error icon symbol color."
+            },
+            {
+              "name": "--jb-notification-border-color",
+              "description": "Notification content border color."
+            },
+            {
+              "name": "--jb-notification-box-shadow",
+              "description": "Notification content shadow."
+            },
+            {
+              "name": "--jb-notification-border-width",
+              "description": "Notification content border width."
+            },
+            {
+              "name": "--jb-notification-border-style",
+              "description": "Notification content border style."
+            },
+            {
+              "name": "--jb-notification-grid-template-columns",
+              "description": "Notification content grid columns."
+            },
+            {
+              "name": "--jb-notification-content-align-items",
+              "description": "Notification content grid alignment."
             }
           ]
         },

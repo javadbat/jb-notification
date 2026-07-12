@@ -13,7 +13,7 @@ export class JBNotificationWebComponent extends HTMLElement {
   #description: string | null = null;
   #duration = 3000;
   #type: NotificationType = "INFO";
-  #internals!: ElementInternals;
+  #internals?: ElementInternals;
   get title() {
     return this.#title;
   }
@@ -39,6 +39,7 @@ export class JBNotificationWebComponent extends HTMLElement {
     if (notificationTypes.includes(value as NotificationType)) {
       this.#type = value;
       this.updateUIBaseOnType(value);
+      this.#syncTypeState(value);
     } else {
       console.error(`type ${value} is not a valid NotificationType`);
     }
@@ -54,6 +55,7 @@ export class JBNotificationWebComponent extends HTMLElement {
       //some browser don't support attachInternals
       this.#internals = this.attachInternals();
       this.#internals.role = "alertdialog";
+      this.#internals.states?.add("closed");
     }
     this.initWebComponent();
     this.type = 'INFO';
@@ -142,9 +144,18 @@ export class JBNotificationWebComponent extends HTMLElement {
         break;
     }
   }
+  #syncTypeState(type: NotificationType) {
+    this.#internals?.states?.delete("info");
+    this.#internals?.states?.delete("success");
+    this.#internals?.states?.delete("warning");
+    this.#internals?.states?.delete("error");
+    this.#internals?.states?.add(type.toLowerCase());
+  }
   #timer: number | null = null;
   show() {
     this.#state = "OPEN";
+    this.#internals?.states?.add("open");
+    this.#internals?.states?.delete("closed");
     this.elements.componentWrapper.classList.add("--show");
     this.#animateIcon();
     this.#timer = setTimeout(() => {
@@ -247,6 +258,8 @@ export class JBNotificationWebComponent extends HTMLElement {
   }
   onClose() {
     this.#state = "CLOSE";
+    this.#internals?.states?.delete("open");
+    this.#internals?.states?.add("closed");
     if (this.#timer) {
       clearInterval(this.#timer);
     }

@@ -1,0 +1,45 @@
+.notification-demo-stack {
+  display: grid;
+  gap: 0.65rem;
+}
+
+jb-notification.terminal-style {
+  --jb-notification-width: 100%;
+  --jb-notification-max-width: 100%;
+  --jb-notification-padding: 0.75rem 0.85rem;
+  --jb-notification-border-radius: 0;
+  --jb-notification-gap: 0.75rem;
+  --jb-notification-icon-size: 2.1rem;
+  --jb-notification-title-font-size: 0.9rem;
+  --jb-notification-title-font-weight: 700;
+  --jb-notification-desc-font-size: 0.78rem;
+  --jb-notification-desc-font-weight: 400;
+  --jb-notification-bg-color-success: #03190d;
+  --jb-notification-bg-color-info: #061624;
+  --jb-notification-bg-color-warning: #221a03;
+  --jb-notification-bg-color-error: #220808;
+  --jb-notification-text-color-success: #7cffb2;
+  --jb-notification-text-color-info: #7dd3fc;
+  --jb-notification-text-color-warning: #fde047;
+  --jb-notification-text-color-error: #ff8a8a;
+  --jb-notification-icon-bg-color: #0b0f14;
+  --jb-notification-icon-symbol-color-success: #7cffb2;
+  --jb-notification-icon-symbol-color-info: #7dd3fc;
+  --jb-notification-icon-symbol-color-warning: #fde047;
+  --jb-notification-icon-symbol-color-error: #ff8a8a;
+  --jb-notification-border-width: 1px;
+  --jb-notification-border-color: currentColor;
+  --jb-notification-box-shadow: 0 0 0.75rem rgb(0 255 128 / 0.08);
+}
+
+jb-notification.terminal-style::part(component) {
+  display: block;
+}
+
+jb-notification.terminal-style::part(title) {
+  font-family: "Courier New", monospace;
+}
+
+jb-notification.terminal-style::part(icon) {
+  filter: drop-shadow(0 0 0.35rem rgb(124 255 178 / 0.28));
+}

@@ -1,9 +1,9 @@
 export function renderHTML(): string {
   return /* html */ `
-  <div class="jb-notification-web-component --info">
+  <div class="jb-notification-web-component --info" part="component">
     <div class="notification-content" part="content">
         <div class="icon-wrapper" part="icon">
-            <svg class="notification-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="notification-icon" part="icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                 </defs>
                 
@@ -28,7 +28,7 @@ export function renderHTML(): string {
                 </g>
             </svg>
         </div>
-        <div class="message-texts-wrapper">
+        <div class="message-texts-wrapper" part="texts">
             <div class="title-wrapper" part="title"></div>
             <div class="desc-wrapper" part="description"></div>
         </div>

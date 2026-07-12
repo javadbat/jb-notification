@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { JBButton } from 'jb-button/react';
 import './styles/jb-notification-styles.css';
 import { NotificationManager } from 'jb-notification/manager';
