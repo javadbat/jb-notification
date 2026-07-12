@@ -140,6 +140,11 @@ export const Gallery: Story = {
   ),
 };
 
+export const Default: Story = {
+  name: "Default",
+  render: () => <NotificationStyleSample notificationClassName="" themeClassName="" />,
+};
+
 export const Carbon: Story = {
   name: "Carbon",
   render: () => <NotificationStyleSample {...styleSamples[0]} />,
