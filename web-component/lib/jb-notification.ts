@@ -20,6 +20,7 @@ export class JBNotificationWebComponent extends HTMLElement {
   set title(value: string) {
     this.#title = value;
     this.elements.titleWrapper.innerText = value;
+    if (this.#internals) this.#internals.ariaLabel = value;
   }
   get description() {
     return this.#description;
@@ -31,6 +32,7 @@ export class JBNotificationWebComponent extends HTMLElement {
     } else {
       this.elements.descWrapper.innerText = "";
     }
+    if (this.#internals) this.#internals.ariaDescription = value ?? "";
   }
   get type(): NotificationType {
     return this.#type;
@@ -54,7 +56,10 @@ export class JBNotificationWebComponent extends HTMLElement {
     if (typeof this.attachInternals == "function") {
       //some browser don't support attachInternals
       this.#internals = this.attachInternals();
-      this.#internals.role = "alertdialog";
+      this.#internals.role = "status";
+      this.#internals.ariaLive = "polite";
+      this.#internals.ariaAtomic = "true";
+      this.#internals.ariaHidden = "true";
       this.#internals.states?.add("closed");
     }
     this.initWebComponent();
@@ -150,12 +155,18 @@ export class JBNotificationWebComponent extends HTMLElement {
     this.#internals?.states?.delete("warning");
     this.#internals?.states?.delete("error");
     this.#internals?.states?.add(type.toLowerCase());
+    const isUrgent = type === "ERROR" || type === "WARNING";
+    if (this.#internals) {
+      this.#internals.role = isUrgent ? "alert" : "status";
+      this.#internals.ariaLive = isUrgent ? "assertive" : "polite";
+    }
   }
   #timer: number | null = null;
   show() {
     this.#state = "OPEN";
     this.#internals?.states?.add("open");
     this.#internals?.states?.delete("closed");
+    if (this.#internals) this.#internals.ariaHidden = "false";
     this.elements.componentWrapper.classList.add("--show");
     this.#animateIcon();
     this.#timer = setTimeout(() => {
@@ -260,6 +271,7 @@ export class JBNotificationWebComponent extends HTMLElement {
     this.#state = "CLOSE";
     this.#internals?.states?.delete("open");
     this.#internals?.states?.add("closed");
+    if (this.#internals) this.#internals.ariaHidden = "true";
     if (this.#timer) {
       clearInterval(this.#timer);
     }
