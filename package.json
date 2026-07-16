@@ -35,6 +35,21 @@
   },
   "main": "index.js",
   "types": "./web-component/dist/jb-notification.d.ts",
+  "exports": {
+    ".": {
+      "types": "./web-component/dist/jb-notification.d.ts",
+      "default": "./index.js"
+    },
+    "./manager": {
+      "types": "./manager/dist/jb-notification-manager.d.ts",
+      "default": "./manager/main.js"
+    },
+    "./wrapper": {
+      "types": "./wrapper/dist/jb-notification-wrapper.d.ts",
+      "default": "./wrapper/main.js"
+    },
+    "./*": "./*"
+  },
   "customElements": "web-component/custom-elements.json",
   "repository": {
 		"type": "git",
