@@ -7,28 +7,28 @@ jb-notification.material-style {
   --jb-notification-width: 100%;
   --jb-notification-max-width: 100%;
   --jb-notification-padding: 0.75rem 1rem;
-  --jb-notification-border-radius: 0.25rem;
+  --jb-notification-border-radius: var(--jb-radius-sm);
   --jb-notification-gap: 0.8rem;
   --jb-notification-icon-size: 2.2rem;
   --jb-notification-title-font-size: 0.9rem;
   --jb-notification-title-font-weight: 500;
   --jb-notification-desc-font-size: 0.78rem;
   --jb-notification-desc-font-weight: 400;
-  --jb-notification-bg-color-success: #e8f5e9;
-  --jb-notification-bg-color-info: #e3f2fd;
-  --jb-notification-bg-color-warning: #fff8e1;
-  --jb-notification-bg-color-error: #ffebee;
-  --jb-notification-text-color-success: #1b5e20;
-  --jb-notification-text-color-info: #0d47a1;
-  --jb-notification-text-color-warning: #795548;
-  --jb-notification-text-color-error: #b71c1c;
-  --jb-notification-icon-bg-color: var(--jb-surface);
-  --jb-notification-icon-symbol-color-success: #2e7d32;
-  --jb-notification-icon-symbol-color-info: #1976d2;
-  --jb-notification-icon-symbol-color-warning: #f9a825;
-  --jb-notification-icon-symbol-color-error: #d32f2f;
+  --jb-notification-bg-color-success: var(--jb-success-container);
+  --jb-notification-bg-color-info: var(--jb-primary-container);
+  --jb-notification-bg-color-warning: var(--jb-warning-container);
+  --jb-notification-bg-color-error: var(--jb-error-container);
+  --jb-notification-text-color-success: #0d5223;
+  --jb-notification-text-color-info: var(--jb-on-primary-container);
+  --jb-notification-text-color-warning: #4d3a00;
+  --jb-notification-text-color-error: #410e0b;
+  --jb-notification-icon-bg-color: transparent;
+  --jb-notification-icon-symbol-color-success: var(--jb-success);
+  --jb-notification-icon-symbol-color-info: var(--jb-primary);
+  --jb-notification-icon-symbol-color-warning: var(--jb-warning);
+  --jb-notification-icon-symbol-color-error: var(--jb-error);
   --jb-notification-border-width: 0;
-  --jb-notification-box-shadow: 0 0.35rem 1rem rgb(0 0 0 / 0.2);
+  --jb-notification-box-shadow: none;
 }
 
 jb-notification.material-style::part(component) {
@@ -36,5 +36,5 @@ jb-notification.material-style::part(component) {
 }
 
 jb-notification.material-style::part(content) {
-  min-height: 4.5rem;
+  min-height: 4rem;
 }
