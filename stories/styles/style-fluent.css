@@ -9,7 +9,7 @@ jb-notification.fluent-style {
   --jb-notification-padding: 0.75rem 0.9rem;
   --jb-notification-border-radius: 0.375rem;
   --jb-notification-gap: 0.75rem;
-  --jb-notification-icon-size: 2.2rem;
+  --jb-notification-icon-size: 1.75rem;
   --jb-notification-title-font-size: 0.9rem;
   --jb-notification-title-font-weight: 600;
   --jb-notification-desc-font-size: 0.78rem;
@@ -25,7 +25,7 @@ jb-notification.fluent-style {
   --jb-notification-icon-bg-color: var(--jb-text-contrast);
   --jb-notification-border-width: 1px;
   --jb-notification-border-color: var(--jb-surface-hover);
-  --jb-notification-box-shadow: 0 0.4rem 1.1rem rgb(0 0 0 / 0.12);
+  --jb-notification-box-shadow: 0 0.125rem 0.5rem rgb(0 0 0 / 0.1);
 }
 
 jb-notification.fluent-style::part(component) {
@@ -33,5 +33,5 @@ jb-notification.fluent-style::part(component) {
 }
 
 jb-notification.fluent-style::part(content) {
-  border-inline-start-width: 0.35rem;
+  border-inline-start-width: 0.25rem;
 }
