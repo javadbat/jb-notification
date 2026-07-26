@@ -31,7 +31,7 @@
     "wrapper/dist/"
   ],
   "dependencies": {
-    "jb-core":">=0.30.0"
+    "jb-core":"^0.30.0"
   },
   "main": "index.js",
   "types": "./web-component/dist/jb-notification.d.ts",
