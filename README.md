@@ -15,15 +15,13 @@ Notification and toast web components for showing short application messages fro
 
 ## When to use
 
-Use `jb-notification` for short-lived feedback messages such as success messages, errors, warnings, and informational toasts.
+Use `jb-notification` for short-lived feedback messages such as success messages, errors, warnings, and informational toasts. [See the direct notification demo](https://javadbat.github.io/design-system/?path=/story/components-jbnotification--direct-notification).
 
 Use an inline message component when the message must stay attached to a form field or page section. Use `jb-modal` when the user must respond before continuing.
 
 ## Demo
 
-- [Storybook](https://javadbat.github.io/design-system/?path=/story/components-jbnotification--normal)
-- [CodeSandbox preview](https://3f63dj.csb.app/samples/jb-notification)
-- [CodeSandbox code](https://codesandbox.io/p/sandbox/jb-design-system-3f63dj?file=%2Fsrc%2Fsamples%2FJBNotification.tsx%3A11%2C24)
+[Try the interactive notification examples](https://javadbat.github.io/design-system/?path=/story/components-jbnotification--overview), or open the [CodeSandbox preview](https://3f63dj.csb.app/samples/jb-notification) and [source](https://codesandbox.io/p/sandbox/jb-design-system-3f63dj?file=%2Fsrc%2Fsamples%2FJBNotification.tsx%3A11%2C24).
 
 ## Installation
 
@@ -45,34 +43,36 @@ import 'jb-notification';
 
 | name | type | default | description |
 | --- | --- | --- | --- |
-| `title` | `string` | `""` | Main notification title. |
-| `description` | `string` | `null` | Optional detail text below the title. |
-| `type` | `'INFO' \| 'SUCCESS' \| 'WARNING' \| 'ERROR'` | `INFO` | Notification visual type. Invalid values are ignored and logged in the console. |
+| `title` | `string` | `""` | Main notification title. [Demo](https://javadbat.github.io/design-system/?path=/story/components-jbnotification--direct-notification) |
+| `description` | `string` | `null` | Optional detail text below the title. [Demo](https://javadbat.github.io/design-system/?path=/story/components-jbnotification--direct-notification) |
+| `type` | `'INFO' \| 'SUCCESS' \| 'WARNING' \| 'ERROR'` | `INFO` | Notification visual type. Invalid values are ignored and logged in the console. [Demo](https://javadbat.github.io/design-system/?path=/story/components-jbnotification--action-test) |
 
 ### Properties
 
 | name | type | readonly | description |
 | --- | --- | --- | --- |
-| `title` | `string` | no | Main notification title. |
-| `description` | `string \| null` | no | Optional detail text below the title. |
-| `type` | `'INFO' \| 'SUCCESS' \| 'WARNING' \| 'ERROR'` | no | Notification visual type. |
-| `state` | `'OPEN' \| 'CLOSE'` | yes | Current notification state. |
+| `title` | `string` | no | Main notification title. [Demo](https://javadbat.github.io/design-system/?path=/story/components-jbnotification--direct-notification) |
+| `description` | `string \| null` | no | Optional detail text below the title. [Demo](https://javadbat.github.io/design-system/?path=/story/components-jbnotification--direct-notification) |
+| `type` | `'INFO' \| 'SUCCESS' \| 'WARNING' \| 'ERROR'` | no | Notification visual type. [Demo](https://javadbat.github.io/design-system/?path=/story/components-jbnotification--action-test) |
+| `state` | `'OPEN' \| 'CLOSE'` | yes | Current notification state. [Demo](https://javadbat.github.io/design-system/?path=/story/components-jbnotification--direct-notification) |
 
 ### Methods
 
 | name | returns | description |
 | --- | --- | --- |
-| `show()` | `void` | Shows the notification, starts the show animation, and schedules hide after the internal duration. |
-| `hide()` | `void` | Starts the hide animation and dispatches `close` after the animation completes. |
-| `onClose()` | `void` | Sets state to `CLOSE`, clears the timer, and dispatches `close`. |
+| `show()` | `void` | Shows the notification, starts the show animation, and schedules hide after the internal duration. [Demo](https://javadbat.github.io/design-system/?path=/story/components-jbnotification--direct-notification) |
+| `hide()` | `void` | Starts the hide animation and dispatches `close` after the animation completes. [Demo](https://javadbat.github.io/design-system/?path=/story/components-jbnotification--direct-notification) |
+| `onClose()` | `void` | Sets state to `CLOSE`, clears the timer, and dispatches `close`. [Demo](https://javadbat.github.io/design-system/?path=/story/components-jbnotification--direct-notification) |
 
 ### Events
 
 | event | detail | description |
 | --- | --- | --- |
-| `close` | none | Dispatched when the notification finishes closing or is dismissed by swipe. Use it to remove the element from its wrapper. |
+| `close` | none | Dispatched when the notification finishes closing or is dismissed by swipe. Use it to remove the element from its wrapper. [Demo](https://javadbat.github.io/design-system/?path=/story/components-jbnotification--direct-notification) |
 
 ## Basic usage
+
+The direct element lifecycle is demonstrated in the [direct notification demo](https://javadbat.github.io/design-system/?path=/story/components-jbnotification--direct-notification).
 
 ```js
 const notification = document.createElement('jb-notification');
@@ -97,6 +97,8 @@ notification.show();
 ```
 
 ## Message types
+
+The manager example exercises `INFO`, `SUCCESS`, `WARNING`, and `ERROR` notifications. [Demo](https://javadbat.github.io/design-system/?path=/story/components-jbnotification--action-test)
 
 | type | use for |
 | --- | --- |
@@ -127,7 +129,7 @@ wrapper.appendChild(notification);
 notification.show();
 ```
 
-For wrapper-specific usage and CSS variables, see [jb-notification-wrapper README](https://javadbat.github.io/design-system/?path=/docs/components-jbnotification-wrapper-readme--docs).
+For wrapper-specific usage and CSS variables, see the [wrapper documentation](https://javadbat.github.io/design-system/?path=/docs/components-jbnotification-wrapper-readme--docs).
 
 ## Manager
 
@@ -145,11 +147,11 @@ notificationManager.new({
 });
 ```
 
-For manager-specific helpers, see [jb-notification-manager README](https://javadbat.github.io/design-system/?path=/docs/components-jbnotification-manager-readme--docs).
+For manager-specific helpers, see the [manager documentation](https://javadbat.github.io/design-system/?path=/docs/components-jbnotification-manager-readme--docs).
 
 ## CSS parts and custom style
 
-For complete styling guidance, live examples, and copyable style recipes, see [Styling](https://javadbat.github.io/design-system/?path=/docs/components-jbnotification-styling).
+For complete styling guidance, live examples, and copyable style recipes, see the [styling guide](https://javadbat.github.io/design-system/?path=/docs/components-jbnotification-styling) and [style gallery](https://javadbat.github.io/design-system/?path=/story/components-jbnotification-style--gallery).
 
 | part | description |
 | --- | --- |
@@ -232,7 +234,7 @@ jb-notification-wrapper {
 
 ## Accessibility notes
 
-- The notification sets `ElementInternals.role` to `alertdialog` when ElementInternals is available.
+- The notification sets `ElementInternals.role` to `alertdialog` when ElementInternals is available. [Demo](https://javadbat.github.io/design-system/?path=/story/components-jbnotification--direct-notification)
 - The component does not trap focus or require user action before it closes.
 - Use concise `title` and `description` text because notifications auto-hide after the internal duration.
 

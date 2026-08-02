@@ -14,7 +14,7 @@ import { NotificationManager } from 'jb-notification-manager';
 
 ## Usage
 
-Use it when you want a central notification manager instead of manually creating a wrapper and appending every `jb-notification` element.
+Use it when you want a central notification manager instead of manually creating a wrapper and appending every `jb-notification` element. [Demo and API reference](https://javadbat.github.io/design-system/?path=/docs/components-jbnotification-manager-readme--docs)
 
 ```js
 const notificationManager = new NotificationManager();
@@ -44,8 +44,8 @@ notificationManager.new({
 
 | name | params | description |
 | --- | --- | --- |
-| `new(params)` | `{ title: string; type?: NotificationType; desc?: string }` | Creates a `jb-notification`, appends it to the wrapper, calls `show()`, and removes it after `close`. |
-| `onNotificationClose(event)` | `Event` | Removes the closed notification from the wrapper. |
+| `new(params)` | `{ title: string; type?: NotificationType; desc?: string }` | Creates a `jb-notification`, appends it to the wrapper, calls `show()`, and removes it after `close`. [Demo](https://javadbat.github.io/design-system/?path=/story/components-jbnotification--action-test) |
+| `onNotificationClose(event)` | `Event` | Removes the closed notification from the wrapper. [Demo](https://javadbat.github.io/design-system/?path=/story/components-jbnotification--action-test) |
 
 ## Related components
 

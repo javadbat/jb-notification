@@ -15,6 +15,8 @@ import 'jb-notification-wrapper';
 
 ## Usage
 
+See the [wrapper demo and API reference](https://javadbat.github.io/design-system/?path=/docs/components-jbnotification-wrapper-readme--docs).
+
 ```html
 <jb-notification-wrapper></jb-notification-wrapper>
 ```
@@ -39,7 +41,7 @@ notification.show();
 
 | slot | description |
 | --- | --- |
-| default | Notification elements rendered inside the wrapper. |
+| default | Notification elements rendered inside the wrapper. [Demo](https://javadbat.github.io/design-system/?path=/docs/components-jbnotification-wrapper-readme--docs) |
 
 ### CSS variables
 
@@ -65,6 +67,8 @@ jb-notification-wrapper {
   --jb-notification-wrapper-padding-top: 5rem;
 }
 ```
+
+The wrapper layout variables are also shown in the [styling gallery](https://javadbat.github.io/design-system/?path=/story/components-jbnotification-style--gallery).
 
 ## Related components
 
