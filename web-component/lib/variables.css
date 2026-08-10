@@ -18,7 +18,7 @@
   --bg-color-info:var(--jb-notification-bg-color-info, var(--jb-primary));
   --bg-color-warning:var(--jb-notification-bg-color-warning, var(--jb-yellow));
   --bg-color-error:var(--jb-notification-bg-color-error, var(--jb-red));
-  --text-color: var(--jb-text-inverse);
+  --text-color: var(--jb-content-inverse);
   --text-color-info: var(--jb-notification-text-color-info, var(--text-color));
   --text-color-success: var(--jb-notification-text-color-success, var(--text-color));
   --text-color-warning: var(--jb-notification-text-color-warning, var(--text-color));
