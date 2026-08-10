@@ -22,7 +22,7 @@ jb-notification.fluent-style {
   --jb-notification-text-color-info: var(--jb-text-secondary);
   --jb-notification-text-color-warning: #605e00;
   --jb-notification-text-color-error: #a4262c;
-  --jb-notification-icon-bg-color: var(--jb-text-contrast);
+  --jb-notification-icon-bg-color: var(--jb-text-inverse);
   --jb-notification-border-width: 1px;
   --jb-notification-border-color: var(--jb-surface-hover);
   --jb-notification-box-shadow: 0 0.125rem 0.5rem rgb(0 0 0 / 0.1);

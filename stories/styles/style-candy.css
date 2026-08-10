@@ -22,7 +22,7 @@ jb-notification.candy-style {
   --jb-notification-text-color-info: #0a4e80;
   --jb-notification-text-color-warning: #7a4e00;
   --jb-notification-text-color-error: #8f174f;
-  --jb-notification-icon-bg-color: var(--jb-text-contrast);
+  --jb-notification-icon-bg-color: var(--jb-text-inverse);
   --jb-notification-border-width: 1px;
   --jb-notification-border-color: rgb(255 255 255 / 0.88);
   --jb-notification-box-shadow: 0 0.55rem 1.25rem rgb(244 114 182 / 0.16);
