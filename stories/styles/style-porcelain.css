@@ -22,7 +22,7 @@ jb-notification.porcelain-style {
   --jb-notification-text-color-info: #305f9f;
   --jb-notification-text-color-warning: #8b6500;
   --jb-notification-text-color-error: #a43d45;
-  --jb-notification-icon-bg-color: var(--jb-surface);
+  --jb-notification-icon-bg-color: var(--jb-surface-primary);
   --jb-notification-icon-symbol-color-success: #267447;
   --jb-notification-icon-symbol-color-info: #305f9f;
   --jb-notification-icon-symbol-color-warning: #b7791f;

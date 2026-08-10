@@ -23,7 +23,7 @@ jb-notification.carbon-style {
   --jb-notification-text-color-info: #d0e2ff;
   --jb-notification-text-color-warning: #fff8d6;
   --jb-notification-text-color-error: #ffd7d9;
-  --jb-notification-icon-bg-color: var(--jb-text-primary);
+  --jb-notification-icon-bg-color: var(--jb-content-primary);
   --jb-notification-border-width: 1px;
   --jb-notification-border-color: var(--jb-border-color);
   --jb-notification-box-shadow: none;

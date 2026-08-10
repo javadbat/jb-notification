@@ -22,7 +22,7 @@ jb-notification.bootstrap-style {
   --jb-notification-text-color-info: #055160;
   --jb-notification-text-color-warning: #664d03;
   --jb-notification-text-color-error: #842029;
-  --jb-notification-icon-bg-color: var(--jb-surface);
+  --jb-notification-icon-bg-color: var(--jb-surface-primary);
   --jb-notification-icon-symbol-color-success: var(--jb-success);
   --jb-notification-icon-symbol-color-info: #0dcaf0;
   --jb-notification-icon-symbol-color-warning: #ffc107;
