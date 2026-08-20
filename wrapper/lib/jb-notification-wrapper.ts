@@ -1,8 +1,9 @@
+import { defineWebComponent, JBBaseComponent } from "jb-core";
 import CSS from './jb-notification-wrapper.css';
 import VariablesCSS from './variables.css';
 import { renderHTML } from './render';
 
-export class JBNotificationWrapperWebComponent extends HTMLElement {
+export class JBNotificationWrapperWebComponent extends JBBaseComponent {
 
   constructor() {
     super();
@@ -33,8 +34,4 @@ export class JBNotificationWrapperWebComponent extends HTMLElement {
     }
   }
 }
-const myElementNotExists = !customElements.get('jb-notification-wrapper');
-if (myElementNotExists) {
-  window.customElements.define('jb-notification-wrapper', JBNotificationWrapperWebComponent);
-}
-
+defineWebComponent('jb-notification-wrapper', JBNotificationWrapperWebComponent);

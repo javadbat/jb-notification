@@ -1,3 +1,4 @@
+import { defineWebComponent, JBBaseComponent } from "jb-core";
 import CSS from './jb-notification.css';
 import VariablesCSS from './variables.css';
 import { renderHTML } from './render';
@@ -7,7 +8,7 @@ import { registerDefaultVariables } from 'jb-core/theme';
 
 export type { NotificationType };
 export const notificationTypes: NotificationType[] = ["ERROR", "INFO", "SUCCESS", "WARNING"];
-export class JBNotificationWebComponent extends HTMLElement {
+export class JBNotificationWebComponent extends JBBaseComponent {
   #state: "OPEN" | "CLOSE" = "CLOSE";
   #title = "";
   #description: string | null = null;
@@ -387,8 +388,4 @@ export class JBNotificationWebComponent extends HTMLElement {
 
   }
 }
-const myElementNotExists = !customElements.get('jb-notification');
-if (myElementNotExists) {
-  window.customElements.define('jb-notification', JBNotificationWebComponent);
-}
-
+defineWebComponent('jb-notification', JBNotificationWebComponent);
