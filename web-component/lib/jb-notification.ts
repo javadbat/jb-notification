@@ -389,3 +389,9 @@ export class JBNotificationWebComponent extends JBBaseComponent {
   }
 }
 defineWebComponent('jb-notification', JBNotificationWebComponent);
+
+declare global {
+  interface HTMLElementTagNameMap {
+    "jb-notification": JBNotificationWebComponent;
+  }
+}

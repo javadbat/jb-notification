@@ -35,3 +35,9 @@ export class JBNotificationWrapperWebComponent extends JBBaseComponent {
   }
 }
 defineWebComponent('jb-notification-wrapper', JBNotificationWrapperWebComponent);
+
+declare global {
+  interface HTMLElementTagNameMap {
+    "jb-notification-wrapper": JBNotificationWrapperWebComponent;
+  }
+}
