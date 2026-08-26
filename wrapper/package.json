@@ -28,6 +28,6 @@
   "customElements": "custom-elements.json",
   "repository": {
 		"type": "git",
-		"url": "git@github.com:javadbat/jb-notification.git"
+		"url": "https://github.com/javadbat/jb-notification.git"
   }
 }
