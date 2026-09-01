@@ -8,7 +8,10 @@ export const webComponentList: WebComponentBuildConfig[] = [
     tsConfigPath: "./web-component/tsconfig.json",
     umdName: "JBNotification",
     external: ["jb-core","jb-core/theme"],
-    globals: {},
+    globals: {
+      "jb-core": "JBCore",
+      "jb-core/theme": "JBCoreTheme",
+    },
   },
   {
     name: "jb-notification-wrapper",
@@ -16,7 +19,10 @@ export const webComponentList: WebComponentBuildConfig[] = [
     outputPath: "./wrapper/dist/jb-notification-wrapper.js",
     umdName: "JBNotificationWrapper",
     external: ["jb-core", "jb-notification"],
-    globals: {},
+    globals: {
+      "jb-core": "JBCore",
+      "jb-notification": "JBNotification",
+    },
     dir:"./wrapper",
   },
     {
@@ -25,7 +31,10 @@ export const webComponentList: WebComponentBuildConfig[] = [
     outputPath: "./manager/dist/jb-notification-manager.js",
     umdName: "JBNotificationManager",
     external: ["jb-core", "jb-notification"],
-    globals: {"jb-notification":"JBNotification"},
+    globals: {
+      "jb-core": "JBCore",
+      "jb-notification": "JBNotification",
+    },
     dir:"./manager",
 
   },
