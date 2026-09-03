@@ -32,7 +32,7 @@ jb-notification.porcelain-style {
   --jb-notification-box-shadow: 0 0.75rem 1.75rem rgb(51 72 103 / 0.08);
 }
 
-jb-notification.porcelain-style::part(component) {
+jb-notification.porcelain-style::part(root) {
   display: block;
 }
 

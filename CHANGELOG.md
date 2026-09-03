@@ -1,5 +1,12 @@
 # Changelog
 
+
+## [1.1.0] - 2026-09-03
+
+### Changed
+
+- Added read-only `isVisible` to expose the notification's current visibility while retaining `show()`/`hide()`.
+- Breaking: updated the component root part to the shared `root` name.
 ## [1.0.0] - 2026-09-01
 
 ### Changed

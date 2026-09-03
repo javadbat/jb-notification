@@ -163,8 +163,14 @@ export class JBNotificationWebComponent extends JBBaseComponent {
     }
   }
   #timer: number | null = null;
+  #isVisible = false;
+  get isVisible(): boolean {
+    return this.#isVisible;
+  }
+
   show() {
     this.#state = "OPEN";
+    this.#isVisible = true;
     this.#internals?.states?.add("open");
     this.#internals?.states?.delete("closed");
     if (this.#internals) this.#internals.ariaHidden = "false";
@@ -269,6 +275,7 @@ export class JBNotificationWebComponent extends JBBaseComponent {
 
   }
   onClose() {
+    this.#isVisible = false;
     this.#state = "CLOSE";
     this.#internals?.states?.delete("open");
     this.#internals?.states?.add("closed");

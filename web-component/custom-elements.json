@@ -72,6 +72,15 @@
                 "text": "'OPEN' | 'CLOSE'"
               },
               "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "isVisible",
+              "description": "Whether the notification is currently visible.",
+              "type": {
+                "text": "boolean"
+              },
+              "readonly": true
             }
           ],
           "methods": [
@@ -96,7 +105,7 @@
           ],
           "cssParts": [
             {
-              "name": "component",
+              "name": "root",
               "description": "Outer notification wrapper."
             },
             {

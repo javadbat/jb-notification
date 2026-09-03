@@ -32,7 +32,7 @@ jb-notification.ant-design-style {
   --jb-notification-box-shadow: 0 0.375rem 1rem rgb(0 0 0 / 0.08), 0 0.1875rem 0.375rem -0.25rem rgb(0 0 0 / 0.12);
 }
 
-jb-notification.ant-design-style::part(component) {
+jb-notification.ant-design-style::part(root) {
   display: block;
 }
 

@@ -29,7 +29,7 @@ jb-notification.aurora-style {
   --jb-notification-box-shadow: 0 0.75rem 1.75rem rgb(0 0 0 / 0.2);
 }
 
-jb-notification.aurora-style::part(component) {
+jb-notification.aurora-style::part(root) {
   display: block;
 }
 

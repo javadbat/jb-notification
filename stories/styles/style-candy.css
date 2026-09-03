@@ -28,7 +28,7 @@ jb-notification.candy-style {
   --jb-notification-box-shadow: 0 0.55rem 1.25rem rgb(244 114 182 / 0.16);
 }
 
-jb-notification.candy-style::part(component) {
+jb-notification.candy-style::part(root) {
   display: block;
 }
 

@@ -32,7 +32,7 @@ jb-notification.terminal-style {
   --jb-notification-box-shadow: 0 0 0.75rem rgb(0 255 128 / 0.08);
 }
 
-jb-notification.terminal-style::part(component) {
+jb-notification.terminal-style::part(root) {
   display: block;
 }
 

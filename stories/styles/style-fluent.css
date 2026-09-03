@@ -28,7 +28,7 @@ jb-notification.fluent-style {
   --jb-notification-box-shadow: 0 0.125rem 0.5rem rgb(0 0 0 / 0.1);
 }
 
-jb-notification.fluent-style::part(component) {
+jb-notification.fluent-style::part(root) {
   display: block;
 }
 

@@ -32,7 +32,7 @@ jb-notification.cupertino-style {
   --jb-notification-box-shadow: 0 0.75rem 1.75rem rgb(60 60 67 / 0.14);
 }
 
-jb-notification.cupertino-style::part(component) {
+jb-notification.cupertino-style::part(root) {
   display: block;
 }
 

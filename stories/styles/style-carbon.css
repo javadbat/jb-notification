@@ -29,7 +29,7 @@ jb-notification.carbon-style {
   --jb-notification-box-shadow: none;
 }
 
-jb-notification.carbon-style::part(component) {
+jb-notification.carbon-style::part(root) {
   display: block;
 }
 
